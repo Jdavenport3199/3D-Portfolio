@@ -5,6 +5,10 @@
     display: none;
   }
 
+  #leva__root > * {
+    scale: 0%;
+  }
+
   html,
   body,
   main {
