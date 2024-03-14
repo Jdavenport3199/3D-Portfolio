@@ -73,16 +73,9 @@ export default function Home() {
               zIndex: 0,
             }}
           >
-            <h1>I'm Christian.</h1>
+            <h1>I&apos;m Christian.</h1>
             <br />
-            <h2>3D Artist / Concept Designer</h2>
-            <br />
-            <br />
-            <br />
-            <p>
-              Explore my catalogue of 3D models, animations, and renders.
-              Available for commissions.
-            </p>
+            <h2>A 3D Artist & Concept Designer.</h2>
           </div>
         </div>
       </div>

@@ -4,12 +4,14 @@ import { useRef } from "react";
 import { useControls } from "leva";
 
 export default function Model() {
-  const mesh = useRef();
+  const mesh = useRef(null);
   const { nodes } = useGLTF("/models/Test.glb");
   const { viewport } = useThree();
 
   useFrame(() => {
-    mesh.current.rotation.y += 0.002;
+    if (mesh.current) {
+      (mesh.current as any).rotation.y += 0.002;
+    }
   });
 
   const materialProps = useControls({
@@ -23,15 +25,8 @@ export default function Model() {
 
   return (
     <group scale={viewport.width / 10}>
-      {/* <Text
-        fontSize={5}
-        position={[0, 0, -15]}
-        font={"fonts/InterTight-ExtraBold.ttf"}
-      >
-        Welcome.
-      </Text> */}
       <mesh ref={mesh} {...nodes.Statue}>
-        <MeshTransmissionMaterial {...materialProps} />{" "}
+        <MeshTransmissionMaterial {...materialProps} />
       </mesh>
     </group>
   );

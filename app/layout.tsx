@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "I'm Christian.",
-  description: "I'm Christian. A 3D Artist.",
+  description: "I'm Christian. A 3D Artist & Concept Designer.",
 };
 
 export default function RootLayout({
@@ -22,10 +22,6 @@ export default function RootLayout({
             defer
             src="https://kit.fontawesome.com/5f2bb09986.js"
             crossOrigin="anonymous"
-          ></script>
-          <script
-            type="module"
-            src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
           ></script>
         </head>
 
