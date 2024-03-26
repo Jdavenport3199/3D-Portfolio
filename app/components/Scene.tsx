@@ -8,7 +8,7 @@ export default function Scene() {
     <Canvas>
       <directionalLight intensity={2} position={[0, 2, 4]} />
       <Environment preset="city" />
-      <ScrollControls pages={0.5} damping={0.25}>
+      <ScrollControls pages={2} damping={5}>
         <Model />
       </ScrollControls>
     </Canvas>

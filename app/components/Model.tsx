@@ -4,7 +4,7 @@ import {
   useScroll,
 } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { useControls } from "leva";
 import { gsap } from "gsap";
 
@@ -13,8 +13,8 @@ export default function Model() {
   const { nodes } = useGLTF("/Statue.glb");
   const mesh = useRef(null);
   const ref = useRef(null);
-  const tl = useRef();
-  const scale = viewport.width / 4.5;
+  const tl = useRef(null);
+  const scale = viewport.width / 40;
   const materialProps = useControls({
     thickness: { value: 1.15, min: 0, max: 3, step: 0.05 },
     roughness: { value: 0.1, min: 0, max: 1, step: 0.1 },
@@ -27,57 +27,62 @@ export default function Model() {
   });
 
   const scroll = useScroll();
+  const [hasScrolled, setHasScrolled] = useState(false);
+  window.onscroll = function (e) {
+    setHasScrolled(true);
+  };
 
   useFrame(() => {
     if (mesh.current) {
       (mesh.current as any).rotation.y += 0.002;
     }
-
-    // tl.current.seek(scroll.offset * tl.current.duration());
+    if (!hasScrolled) {
+      (tl.current as any).seek(scroll.offset * (tl.current as any).duration());
+    }
   });
 
-  // useLayoutEffect(() => {
-  //   tl.current = gsap.timeline();
+  useLayoutEffect(() => {
+    (tl.current as any) = gsap.timeline({ paused: false });
 
-  //   tl.current.to(
-  //     ref.current.position,
-  //     {
-  //       duration: 1,
-  //       y: 15,
-  //       x: 45,
-  //     },
-  //     0
-  //   );
+    (tl.current as any).to(
+      (ref.current as any).position,
+      {
+        duration: 1,
+        y: 1.75,
+        x: 5,
+      },
+      0
+    );
 
-  //   tl.current.to(
-  //     ref.current.rotation,
-  //     {
-  //       duration: 1,
-  //       y: Math.PI / 1.8,
-  //       x: 0,
-  //       z: 0,
-  //     },
-  //     0
-  //   );
+    (tl.current as any).to(
+      (ref.current as any).rotation,
+      {
+        duration: 1,
+        y: Math.PI / 1.8,
+        x: 0,
+        z: 0,
+      },
+      0
+    );
 
-  //   tl.current.to(
-  //     ref.current.scale,
-  //     {
-  //       duration: 1,
-  //       x: 1.5,
-  //       y: 1.5,
-  //       z: 1.5,
-  //     },
-  //     0
-  //   );
-  // }, []);
+    (tl.current as any).to(
+      (ref.current as any).scale,
+      {
+        duration: 1,
+        x: 0.15,
+        y: 0.15,
+        z: 0.15,
+      },
+      0
+    );
+  }, []);
 
   return (
     <group
       ref={ref}
       scale={[scale, scale, scale]}
       dispose={null}
-      position={[0, 0, -40]}
+      position={[0, 0, 0]}
     >
       <mesh ref={mesh} {...nodes.Statue}>
         <MeshTransmissionMaterial {...materialProps} />

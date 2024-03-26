@@ -65,13 +65,22 @@ export default function Home() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            zIndex: "1",
           }}
         >
           <Scene />
         </div>
 
-        <div className="containerHolder" style={{ paddingTop: "32vh" }}>
-          <div className="container">
+        <div className="containerHolder">
+          <div
+            className="container"
+            style={{
+              height: "100vh",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
             <h1>
               3D Artist &
               <br />
@@ -154,7 +163,7 @@ export default function Home() {
           </div>
 
           <div className="container" ref={toolsDiv}>
-            <hr style={{ border: "0px" }} />
+            <hr />
           </div>
           <Tools />
 
@@ -216,35 +225,12 @@ export default function Home() {
                 background: "#f5f5f510",
               }}
             >
-              <Image
-                src={"/instagram.svg"}
-                width={28}
-                height={28}
-                alt=""
-              />
+              <Image src={"/instagram.svg"} width={28} height={28} alt="" />
             </Link>
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.twitter.com/"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "3rem",
-                height: "3rem",
-                borderRadius: "100rem",
-                backdropFilter: "blur(20px)",
-                WebkitBackdropFilter: "blur(20px)",
-                background: "#f5f5f510",
-              }}
-            >
-              <Image src={"/x.svg"} width={28} height={28} alt="" />
-            </Link>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.unrealengine.com/marketplace/en-US/store"
+              href="https://www.unrealengine.com/marketplace/en-US/profile/christiandavenport.studio?count=20&sortBy=effectiveDate&sortDir=DESC&start=0"
               style={{
                 display: "flex",
                 justifyContent: "center",
