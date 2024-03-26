@@ -1,17 +1,21 @@
 "use client";
 import Image from "next/image";
-import styles from "./page.module.css";
 import Scene from "./components/Scene";
 import dynamic from "next/dynamic";
 import { useRef, useState } from "react";
 import Link from "next/link";
+import Tools from "./components/Tools";
+import About from "./components/About";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 const SceneLoading = dynamic(() => import("./components/Scene"), {
   ssr: false,
 });
 
 export default function Home() {
-  const galleryDiv = useRef<HTMLDivElement>(null);
+  const toolsDiv = useRef<HTMLDivElement>(null);
+  const workDiv = useRef<HTMLDivElement>(null);
+  const aboutDiv = useRef<HTMLDivElement>(null);
   const contactDiv = useRef<HTMLDivElement>(null);
 
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
@@ -44,81 +48,226 @@ export default function Home() {
   };
 
   return (
-    <main>
-      <div className="nav">
-        <button onClick={() => scrollTo(galleryDiv)}>Gallery</button>
-        <button onClick={() => scrollTo(contactDiv)}>Contact</button>
-      </div>
+    <ReactLenis root>
+      <main>
+        <div className="nav">
+          <button onClick={() => scrollTo(toolsDiv)}>Tools</button>
+          <button onClick={() => scrollTo(workDiv)}>Work</button>
+          <button onClick={() => scrollTo(aboutDiv)}>About</button>
+          <button onClick={() => scrollTo(contactDiv)}>Contact</button>
+        </div>
 
-      <div className="containerHolder">
-        <div className="blur"></div>
-        <div className="container" style={{ position: "relative" }}>
-          <div
+        <div
+          style={{
+            position: "fixed",
+            height: "100vh",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Scene />
+        </div>
+
+        <div className="containerHolder" style={{ paddingTop: "32vh" }}>
+          <div className="container">
+            <h1>
+              3D Artist &
+              <br />
+              Concept Designer
+            </h1>
+            <div className="cardHolder" style={{ paddingTop: "4rem" }}>
+              <div
+                style={{
+                  background: "#f5f5f510",
+                  maxWidth: "400px",
+                  width: "100%",
+                  height: "150px",
+                  display: "flex",
+                  justifyContent: "left",
+                  alignItems: "center",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
+                  borderRadius: "2rem",
+                }}
+              >
+                <div>
+                  <p>01</p>
+                  <h2>
+                    <br />
+                    3D Modeling
+                  </h2>
+                </div>
+              </div>
+              <div
+                style={{
+                  background: "#f5f5f510",
+                  maxWidth: "400px",
+                  width: "100%",
+                  height: "150px",
+                  display: "flex",
+                  justifyContent: "left",
+                  alignItems: "center",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
+                  borderRadius: "2rem",
+                }}
+              >
+                <div>
+                  <p>02</p>
+                  <h2>
+                    <br />
+                    Concept Design
+                  </h2>
+                </div>
+              </div>
+              <div
+                style={{
+                  background: "#f5f5f510",
+                  maxWidth: "400px",
+                  width: "100%",
+                  height: "150px",
+                  display: "flex",
+                  justifyContent: "left",
+                  alignItems: "center",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
+                  borderRadius: "2rem",
+                }}
+              >
+                <div>
+                  <p>03</p>
+                  <h2>
+                    <br />
+                    Game Ready Assets
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="container" ref={toolsDiv}>
+            <hr style={{ border: "0px" }} />
+          </div>
+          <Tools />
+
+          <div className="container" ref={workDiv}>
+            <hr />
+          </div>
+          <div style={{ paddingBottom: "2rem" }}>
+            <h2>Work</h2>
+          </div>
+          <div className="container">
+            <div className="cardHolder" style={{ justifyContent: "center" }}>
+              <div className="card"></div>
+              <div className="card"></div>
+              <div className="card"></div>
+              <div className="card"></div>
+              <div className="card"></div>
+              <div className="card"></div>
+            </div>
+          </div>
+
+          <div className="container" ref={aboutDiv}>
+            <hr />
+          </div>
+          <About />
+
+          <div className="container" ref={contactDiv}>
+            <hr />
+          </div>
+          <div style={{ paddingBottom: "2rem" }}>
+            <h2>Contact</h2>
+          </div>
+          <p
             style={{
-              position: "absolute",
-              bottom: "0px",
-              right: "0px",
-              zIndex: 1,
-              width: "40%",
-              height: "100%",
+              fontWeight: "200",
+              color: "whitesmoke",
+              marginBottom: "1rem",
+              fontSize: "24px",
             }}
           >
-            <Scene />
-          </div>
+            christiandavenport.studio@gmail.com
+          </p>
           <div
-            style={{
-              position: "absolute",
-              bottom: "10rem",
-              left: "0px",
-              zIndex: 0,
-            }}
+            className="icon-container"
+            style={{ marginBottom: "2rem", gap: "1rem" }}
           >
-            <h1>I&apos;m Christian.</h1>
-            <br />
-            <h2>A 3D Artist & Concept Designer.</h2>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/christiandavenport.studio/"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "3rem",
+                height: "3rem",
+                borderRadius: "100rem",
+                backdropFilter: "blur(20px)",
+                WebkitBackdropFilter: "blur(20px)",
+                background: "#f5f5f510",
+              }}
+            >
+              <Image
+                src={"/icons/instagram.svg"}
+                width={28}
+                height={28}
+                alt=""
+              />
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.twitter.com/"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "3rem",
+                height: "3rem",
+                borderRadius: "100rem",
+                backdropFilter: "blur(20px)",
+                WebkitBackdropFilter: "blur(20px)",
+                background: "#f5f5f510",
+              }}
+            >
+              <Image src={"/icons/x.svg"} width={28} height={28} alt="" />
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.unrealengine.com/marketplace/en-US/store"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "3rem",
+                height: "3rem",
+                borderRadius: "100rem",
+                backdropFilter: "blur(20px)",
+                WebkitBackdropFilter: "blur(20px)",
+                background: "#f5f5f510",
+              }}
+            >
+              <Image src={"/icons/unreal.svg"} width={27} height={28} alt="" />
+            </Link>
           </div>
-        </div>
-      </div>
-
-      <div
-        ref={galleryDiv}
-        className="containerHolder"
-        style={{
-          alignItems: "center",
-          background: "#7F7B8210",
-          borderTop: "1px solid #7F7B8220",
-          borderBottom: "1px solid #7F7B8220",
-        }}
-      >
-        <div className="container">
-          <div className="cardHolder">
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        ref={contactDiv}
-        className="containerHolder"
-        style={{ alignItems: "center" }}
-      >
-        <div className="blur"></div>
-        <div className="container">
           <div
             style={{
               display: emailForm ? "none" : "block",
               textAlign: "center",
+              paddingBlock: "10rem",
             }}
           >
-            <p>
+            <p style={{ color: "whitesmoke" }}>
               Your message has been received.
               <br />A response will follow shortly.
             </p>
@@ -153,41 +302,18 @@ export default function Home() {
             <textarea
               placeholder="Message"
               required
-              style={{ height: "10rem", resize: "none" }}
+              style={{ height: "12rem", resize: "none" }}
               onChange={(e) => setMessage(e.target.value)}
               value={message}
             />
-
-            <button type="submit">Submit</button>
+            <div
+              style={{ width: "100%", textAlign: "center", marginTop: "2rem" }}
+            >
+              <button type="submit">Submit</button>
+            </div>
           </form>
         </div>
-      </div>
-
-      <div className="iconHolder">
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.instagram.com/christiandavenport.studio/"
-        >
-          <Image src={"/images/instagram.svg"} width={28} height={28} alt="" />
-        </Link>
-
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.twitter.com/"
-        >
-          <Image src={"/images/x.svg"} width={28} height={28} alt="" />
-        </Link>
-
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.unrealengine.com/marketplace/en-US/store"
-        >
-          <Image src={"/images/unreal.svg"} width={27} height={28} alt="" />
-        </Link>
-      </div>
-    </main>
+      </main>
+    </ReactLenis>
   );
 }

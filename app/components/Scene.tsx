@@ -1,14 +1,16 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
+import { Environment, ScrollControls } from "@react-three/drei";
 import Model from "./Model";
-import { Environment } from "@react-three/drei";
 
 export default function Scene() {
   return (
     <Canvas>
-      <directionalLight intensity={3} position={[0, 3, 2]} />
+      <directionalLight intensity={2} position={[0, 2, 4]} />
       <Environment preset="city" />
-      <Model />
+      <ScrollControls pages={0.5} damping={0.25}>
+        <Model />
+      </ScrollControls>
     </Canvas>
   );
 }
