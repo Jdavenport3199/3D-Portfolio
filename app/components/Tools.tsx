@@ -10,7 +10,7 @@ export default function Tools() {
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
           <Image
             className="icon"
-            src={"/icons/blender.svg"}
+            src={"/blender.svg"}
             width={60}
             height={60}
             alt=""
@@ -20,7 +20,7 @@ export default function Tools() {
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
           <Image
             className="icon"
-            src={"/icons/unreal.svg"}
+            src={"/unreal.svg"}
             width={60}
             height={60}
             alt=""
@@ -30,7 +30,7 @@ export default function Tools() {
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
           <Image
             className="icon"
-            src={"/icons/adobe.svg"}
+            src={"/adobe.svg"}
             width={60}
             height={60}
             alt=""
@@ -42,7 +42,7 @@ export default function Tools() {
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
           <Image
             className="icon"
-            src={"/icons/figma.svg"}
+            src={"/figma.svg"}
             width={60}
             height={60}
             alt=""
@@ -52,7 +52,7 @@ export default function Tools() {
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
           <Image
             className="icon"
-            src={"/icons/photoshop.svg"}
+            src={"/photoshop.svg"}
             width={60}
             height={60}
             alt=""
@@ -62,7 +62,7 @@ export default function Tools() {
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
           <Image
             className="icon"
-            src={"/icons/Illustrator.svg"}
+            src={"/illustrator.svg"}
             width={60}
             height={60}
             alt=""

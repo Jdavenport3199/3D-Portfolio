@@ -10,7 +10,7 @@ import { gsap } from "gsap";
 
 export default function Model() {
   const { viewport } = useThree();
-  const { nodes } = useGLTF("/models/Statue.glb");
+  const { nodes } = useGLTF("/Statue.glb");
   const mesh = useRef(null);
   const ref = useRef(null);
   const tl = useRef();

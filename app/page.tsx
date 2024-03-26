@@ -217,7 +217,7 @@ export default function Home() {
               }}
             >
               <Image
-                src={"/icons/instagram.svg"}
+                src={"/instagram.svg"}
                 width={28}
                 height={28}
                 alt=""
@@ -239,7 +239,7 @@ export default function Home() {
                 background: "#f5f5f510",
               }}
             >
-              <Image src={"/icons/x.svg"} width={28} height={28} alt="" />
+              <Image src={"/x.svg"} width={28} height={28} alt="" />
             </Link>
             <Link
               target="_blank"
@@ -257,7 +257,7 @@ export default function Home() {
                 background: "#f5f5f510",
               }}
             >
-              <Image src={"/icons/unreal.svg"} width={27} height={28} alt="" />
+              <Image src={"/unreal.svg"} width={27} height={28} alt="" />
             </Link>
           </div>
           <div

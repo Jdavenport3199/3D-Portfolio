@@ -15,7 +15,7 @@ export default function About() {
         }}
       >
         <Image
-          src={"/images/profile.png"}
+          src={"/profile.png"}
           width={200}
           height={200}
           alt=""
