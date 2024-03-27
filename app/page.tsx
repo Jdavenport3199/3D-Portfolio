@@ -72,37 +72,14 @@ export default function Home() {
         </div>
 
         <div className="containerHolder">
-          <div
-            className="container"
-            style={{
-              height: "100vh",
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "column",
-            }}
-          >
+          <div className="containerTitle">
             <h1>
               3D Artist &
               <br />
               Concept Designer
             </h1>
             <div className="cardHolder" style={{ paddingTop: "4rem" }}>
-              <div
-                style={{
-                  background: "#f5f5f510",
-                  maxWidth: "400px",
-                  width: "100%",
-                  height: "150px",
-                  display: "flex",
-                  justifyContent: "left",
-                  alignItems: "center",
-                  paddingLeft: "2rem",
-                  paddingRight: "2rem",
-                  backdropFilter: "blur(20px)",
-                  WebkitBackdropFilter: "blur(20px)",
-                  borderRadius: "2rem",
-                }}
-              >
+              <div className="card-title">
                 <div>
                   <p>01</p>
                   <h2>
@@ -111,22 +88,7 @@ export default function Home() {
                   </h2>
                 </div>
               </div>
-              <div
-                style={{
-                  background: "#f5f5f510",
-                  maxWidth: "400px",
-                  width: "100%",
-                  height: "150px",
-                  display: "flex",
-                  justifyContent: "left",
-                  alignItems: "center",
-                  paddingLeft: "2rem",
-                  paddingRight: "2rem",
-                  backdropFilter: "blur(20px)",
-                  WebkitBackdropFilter: "blur(20px)",
-                  borderRadius: "2rem",
-                }}
-              >
+              <div className="card-title">
                 <div>
                   <p>02</p>
                   <h2>
@@ -135,22 +97,7 @@ export default function Home() {
                   </h2>
                 </div>
               </div>
-              <div
-                style={{
-                  background: "#f5f5f510",
-                  maxWidth: "400px",
-                  width: "100%",
-                  height: "150px",
-                  display: "flex",
-                  justifyContent: "left",
-                  alignItems: "center",
-                  paddingLeft: "2rem",
-                  paddingRight: "2rem",
-                  backdropFilter: "blur(20px)",
-                  WebkitBackdropFilter: "blur(20px)",
-                  borderRadius: "2rem",
-                }}
-              >
+              <div className="card-title">
                 <div>
                   <p>03</p>
                   <h2>
@@ -200,7 +147,7 @@ export default function Home() {
               fontWeight: "200",
               color: "whitesmoke",
               marginBottom: "1rem",
-              fontSize: "24px",
+              fontSize: "20px",
             }}
           >
             christiandavenport.studio@gmail.com
