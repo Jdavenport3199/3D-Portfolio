@@ -6,11 +6,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "3D Studio",
-    template: "%s | Studio",
+    default: "3D ARTIST • CONCEPT DESIGNER",
+    template: "%s | 3D ARTIST • CONCEPT DESIGNER",
   },
-  description: "Christian Davenport • 3D Artist & Concept Designer",
-  keywords: ["3D", "Artist", "Concept", "Designer", "Christian", "Davenport"],
+  description:
+    "I'm Chrisitan, a 3D Artist and Concept Designer proficient in Blender, Substance Painter, and Unreal Engine.",
+  keywords: ["Christian", "Davenport", "3D", "Artist", "Concept", "Designer"],
   metadataBase: new URL("https://www.christiandavenport.studio/"),
 };
 
