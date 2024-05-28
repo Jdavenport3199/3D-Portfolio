@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "3D ARTIST • CONCEPT DESIGNER",
-    template: "%s | 3D ARTIST • CONCEPT DESIGNER",
+    default: "3D ARTIST / CONCEPT DESIGNER",
+    template: "%s | 3D ARTIST / CONCEPT DESIGNER",
   },
   description:
     "I'm Chrisitan, a 3D Artist and Concept Designer proficient in Blender, Substance Painter, and Unreal Engine.",

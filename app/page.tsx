@@ -93,6 +93,28 @@ export default function Home() {
         </button>
       </div>
 
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          backgroundImage: "url(/background.jpg)",
+          backgroundPosition: "top center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% 100%",
+          position: "fixed",
+          opacity: "0.075",
+        }}
+      ></div>
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          backdropFilter: "blur(8px)",
+          WebkitBackdropFilter: "blur(8px)",
+          position: "fixed",
+        }}
+      ></div>
+
       <div className="containerHolder">
         <div
           className="containerTitle"
@@ -138,53 +160,12 @@ export default function Home() {
               justifyContent: "center",
               alignItems: "center",
               gap: "0.6rem",
-              marginTop: "8rem",
+              marginTop: "12rem",
             }}
           >
             <div className="blinking-dot"></div>
             <p className="blink">AVAILABLE FOR FREELANCE</p>
             <div className="blinking-dot"></div>
-          </div>
-          <div
-            className="icon-container"
-            style={{ marginTop: "2rem", gap: "1rem" }}
-          >
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/christiandavenport.studio/"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "4rem",
-                height: "4rem",
-                borderRadius: "100rem",
-                backdropFilter: "blur(20px)",
-                WebkitBackdropFilter: "blur(20px)",
-                background: "#f5f5f510",
-              }}
-            >
-              <Image src={"/instagram.svg"} width={28} height={28} alt="" />
-            </Link>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.unrealengine.com/marketplace/en-US/profile/christiandavenport.studio?count=20&sortBy=effectiveDate&sortDir=DESC&start=0"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "4rem",
-                height: "4rem",
-                borderRadius: "100rem",
-                backdropFilter: "blur(20px)",
-                WebkitBackdropFilter: "blur(20px)",
-                background: "#f5f5f510",
-              }}
-            >
-              <Image src={"/unreal.svg"} width={34} height={34} alt="" />
-            </Link>
           </div>
         </div>
 
@@ -196,10 +177,18 @@ export default function Home() {
         </div>
         <div className="container" style={{ width: "100%" }}>
           <div className="cardHolder" style={{ justifyContent: "center" }}>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
+            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
+              <img className="img" src="/1.jpg" />
+            </Link>
+            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
+              <img className="img" src="/2.jpg" />
+            </Link>
+            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
+              <img className="img" src="/3.jpg" />
+            </Link>
+            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
+              <img className="img" src="/4.jpg" />
+            </Link>
           </div>
         </div>
 
@@ -235,9 +224,9 @@ export default function Home() {
             >
               Christian Davenport
             </p>
-            <p style={{ fontWeight: "200" }}>Charlotte, NC</p>
+            <p>Charlotte, NC</p>
             <p className="bio">
-              I&apos;m Chrisitan, a 3D Artist and Concept Designer proficient in
+              I&apos;m Christian, a 3D Artist and Concept Designer proficient in
               Blender, Substance Painter, and Unreal Engine. I create visually
               stunning and technically sophisticated assets and environments for
               games, films, and interactive media. Additionally, I regularly
@@ -245,6 +234,43 @@ export default function Home() {
               seamlessly integrating 2D and 3D elements, intricate texturing,
               and compelling visual storytelling.
             </p>
+            <div
+              className="icon-container"
+              style={{ marginTop: "2rem", gap: "1rem" }}
+            >
+              <Link
+                className="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/christiandavenport.studio/"
+              >
+                <Image src={"/instagram.svg"} width={32} height={32} alt="" />
+              </Link>
+              <Link
+                className="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://dribbble.com/"
+              >
+                <Image src={"/dribbble.svg"} width={32} height={32} alt="" />
+              </Link>
+              <Link
+                className="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.unrealengine.com/marketplace/en-US/profile/christiandavenport.studio?count=20&sortBy=effectiveDate&sortDir=DESC&start=0"
+              >
+                <Image src={"/unreal.svg"} width={38} height={38} alt="" />
+              </Link>
+              <Link
+                className="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/christian-davenport-5228352ba/"
+              >
+                <Image src={"/linkedin.svg"} width={32} height={32} alt="" />
+              </Link>
+            </div>
           </div>
         </div>
 
