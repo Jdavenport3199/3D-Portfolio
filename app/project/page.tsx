@@ -50,7 +50,13 @@ export default function Project() {
         </div>
         <div className="containerImg">
           <div className="cardShowcase">
-            <img className="img" src="/anim3.gif" />
+            <img className="img" src="/Anim1.gif" />
+          </div>
+          <div className="cardShowcase">
+            <img className="img" src="/Anim2.gif" />
+          </div>
+          <div className="cardShowcase">
+            <img className="img" src="/Anim3.gif" />
           </div>
         </div>
       </div>
