@@ -59,7 +59,7 @@ export default function Home() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "100% 100%",
           position: "fixed",
-          opacity: "0.05",
+          opacity: "0.075",
         }}
       ></div>
       <div
@@ -73,10 +73,7 @@ export default function Home() {
       ></div>
 
       <div className="containerHolder">
-        <div
-          className="containerTitle"
-          style={{ width: "95%", marginTop: "4rem" }}
-        >
+        <div className="containerTitle">
           <h1>
             3D ARTIST
             <br />
@@ -111,15 +108,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "0.6rem",
-              marginTop: "12rem",
-            }}
-          >
+          <div className="notification">
             <div className="blinking-dot"></div>
             <p className="blink">AVAILABLE FOR FREELANCE</p>
             <div className="blinking-dot"></div>

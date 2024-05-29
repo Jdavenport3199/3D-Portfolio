@@ -88,7 +88,12 @@ export default function Contact() {
       ></div>
 
       <div className="containerHolder">
-        <div className="card-title">
+        <div
+          className="card-title"
+          style={{
+            display: emailForm ? "flex" : "none",
+          }}
+        >
           <div style={{ textAlign: "center", marginBottom: "2rem" }}>
             <p>01</p>
             <h2>
@@ -101,10 +106,11 @@ export default function Contact() {
           style={{
             display: emailForm ? "none" : "block",
             textAlign: "center",
-            paddingBlock: "10rem",
           }}
         >
-          <p style={{ color: "whitesmoke" }}>
+          <span className="description">Success</span>
+          <br />
+          <p>
             Your message has been received.
             <br />A response will follow shortly.
           </p>

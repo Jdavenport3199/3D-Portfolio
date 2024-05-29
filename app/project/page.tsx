@@ -27,88 +27,60 @@ export default function Project() {
       ></div>
 
       <div className="containerHolder">
-        <div
-          className="containerHolder"
-          style={{
-            alignItems: "flex-end",
-            gap: "1rem",
-            marginBlock: "1.5rem",
-            width: "95%",
-          }}
-        >
-          <div
-            style={{
-              position: "fixed",
-              left: "4rem",
-              top: "4rem",
-            }}
+        <div className="containerBtn">
+          <Link href={"/"}>
+            {"["} BACK {"]"}
+          </Link>
+        </div>
+        <div className="containerDescription">
+          <h1
+            style={{ fontSize: "clamp(36px, 6vw, 100px)", lineHeight: "1.4" }}
           >
-            <Link href={"/"}>
-              {"["} BACK {"]"}
-            </Link>
-          </div>
-          <div
-            style={{
-              position: "fixed",
-              left: "4rem",
-              top: "12rem",
-              display: "flex",
-              flexDirection: "column",
-              width: "30%",
-            }}
-          >
-            <h1
-              style={{ fontSize: "clamp(36px, 8vw, 100px)", lineHeight: "1.2" }}
-            >
-              Keyboard
-            </h1>
-            <p>Expand Your Universe</p>
-            <br />
-            <div style={{ display: "flex", gap: "0.4rem" }}>
-              <p
-                style={{
-                  color: "black",
-                  borderRadius: "100rem",
-                  border: "1px solid #f5f5f580",
-                  width: "fit-content",
-                  padding: "0.8rem",
-                  paddingBlock: "0.2rem",
-                  fontWeight: "500",
-                  fontSize: "16px",
-                  background: "whitesmoke",
-                }}
-              >
-                Product Design
-              </p>
-              <p
-                style={{
-                  color: "black",
-                  borderRadius: "100rem",
-                  border: "1px solid #f5f5f580",
-                  width: "fit-content",
-                  padding: "0.8rem",
-                  paddingBlock: "0.2rem",
-                  fontWeight: "500",
-                  fontSize: "16px",
-                  background: "whitesmoke",
-                }}
-              >
-                2024
-              </p>
-            </div>
-            <h2
+            Keyboard
+          </h1>
+          <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
+            Product Design, 2024
+          </p>
+          {/* <div style={{ display: "flex", gap: "0.4rem", marginTop: "0.6rem" }}>
+            <p
               style={{
-                paddingTop: "6rem",
+                color: "black",
+                borderRadius: "100rem",
+                border: "1px solid #f5f5f580",
+                width: "fit-content",
+                padding: "0.8rem",
+                paddingBlock: "0.2rem",
+                fontWeight: "400",
+                fontSize: "16px",
+                background: "whitesmoke",
               }}
             >
-              Description
-            </h2>
-            <p>
-              Augmented Reality (AR) and Virtual Reality (VR) bridge the digital
-              And physical worlds. They allow you to take in information and
-              Content visually, in the same way you take in the world.
+              Product Design
             </p>
-          </div>
+            <p
+              style={{
+                color: "black",
+                borderRadius: "100rem",
+                border: "1px solid #f5f5f580",
+                width: "fit-content",
+                padding: "0.8rem",
+                paddingBlock: "0.2rem",
+                fontWeight: "400",
+                fontSize: "16px",
+                background: "whitesmoke",
+              }}
+            >
+              2024
+            </p>
+          </div> */}
+          <span className="description">Description</span>
+          <p>
+            Augmented Reality (AR) and Virtual Reality (VR) bridge the digital
+            And physical worlds. They allow you to take in information and
+            Content visually, in the same way you take in the world.
+          </p>
+        </div>
+        <div className="containerImg">
           <div className="cardShowcase">
             <img className="img" src="/anim1.gif" />
           </div>

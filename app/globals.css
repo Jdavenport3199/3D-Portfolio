@@ -41,7 +41,7 @@
     color: whitesmoke;
     font-family: "Inter Tight", sans-serif;
     font-weight: 500;
-    font-size: clamp(24px, 2vw, 32px)
+    font-size: clamp(24px, 2vw, 28px)
   }
 
   p,
@@ -105,6 +105,14 @@
     z-index: 3;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
+  }
+
+  .notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 8rem;
   }
 
   .img {
@@ -178,6 +186,7 @@
   }
 
   .blink {
+    font-size: clamp(16px, 2vw, 18px);
     animation: blink 3s infinite;
     color: whitesmoke;
   }
@@ -232,7 +241,8 @@
     }
   } */
 
-  .containerHolder {
+  .containerHolder,
+  .containerImg {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -241,17 +251,52 @@
     flex-direction: column;
   }
 
-  .container,
-  .containerTitle {
+  .containerImg {
+    align-items: center;
+    gap: 0.6rem;
+    margin-block: 1.5rem;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .containerBtn {
+    position: relative;
+    left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0rem;
+    height: 5rem;
+    z-index: 3;
+    margin-bottom: 2rem;
+  }
+
+  .containerDescription {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .description {
+    padding-top: 2rem;
+    line-height: 1.6;
+  }
+
+  .container {
     width: 90%;
   }
 
   .containerTitle {
+    width: 95%;
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin-top: 2rem;
   }
 
   footer {
@@ -274,20 +319,45 @@
 }
 
 @media (min-width: 1199px) {
+  .notification {
+    margin-top: 12rem;
+  }
+
   .bio {
     width: 65%;
   }
 
-  .container,
-  .containerTitle {
+  .containerImg {
+    gap: 1rem;
+    align-items: flex-end;
+    width: 95%;
+  }
+
+  .containerBtn {
+    position: fixed;
+    left: 4rem;
+    margin-bottom: 0rem;
+  }
+
+  .containerDescription {
+    position: fixed;
+    left: 4rem;
+    top: 8rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  .description {
+    padding-top: 6rem;
+  }
+
+  .container {
     width: 70%;
   }
 
   .containerTitle {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin-top: 4rem;
   }
 
   form {
