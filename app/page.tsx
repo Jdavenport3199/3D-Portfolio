@@ -1,12 +1,9 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ReactLenis } from "@studio-freight/react-lenis";
 
 export default function Home() {
   const workDiv = useRef<HTMLDivElement>(null);
-  const aboutDiv = useRef<HTMLDivElement>(null);
 
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
@@ -42,55 +39,15 @@ export default function Home() {
     };
   }, [lastScroll]);
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [topic, setTopic] = useState("");
-  const [message, setMessage] = useState("");
-  const [emailForm, setEmailForm] = useState<boolean>(true);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const res = await fetch("/api/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        topic: topic,
-        message: message,
-      }),
-    });
-    setEmailForm(false);
-  };
-
   return (
-    // <ReactLenis root>
     <main>
       <div className="nav" ref={nav}>
-        <button
-          onClick={() =>
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            })
-          }
-        >
-          Home
+        <button onClick={() => scrollTo(workDiv)}>
+          {"["} WORK {"]"}
         </button>
-        <button onClick={() => scrollTo(workDiv)}>Work</button>
-        <button onClick={() => scrollTo(aboutDiv)}>About</button>
-        <button
-          onClick={() =>
-            window.scrollTo({
-              top: document.documentElement.scrollHeight,
-              behavior: "smooth",
-            })
-          }
-        >
-          Contact
-        </button>
+        <Link href={"/contact"}>
+          {"["} CONTACT {"]"}
+        </Link>
       </div>
 
       <div
@@ -102,7 +59,7 @@ export default function Home() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "100% 100%",
           position: "fixed",
-          opacity: "0.075",
+          opacity: "0.05",
         }}
       ></div>
       <div
@@ -169,172 +126,110 @@ export default function Home() {
           </div>
         </div>
 
-        <div
-          style={{ paddingBottom: "2rem", paddingTop: "6rem" }}
-          ref={workDiv}
-        >
-          <h2>Work</h2>
-        </div>
-        <div className="container" style={{ width: "100%" }}>
+        <div className="container" style={{ width: "100%" }} ref={workDiv}>
           <div className="cardHolder" style={{ justifyContent: "center" }}>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/1.jpg" />
-            </Link>
-            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/2.jpg" />
-            </Link>
-            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/3.jpg" />
-            </Link>
-            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/4.jpg" />
+              <img className="img" src="/Anim3.gif" />
             </Link>
           </div>
         </div>
 
-        <div className="containerHolder">
-          <div
-            style={{ paddingBottom: "2rem", paddingTop: "6rem" }}
-            ref={aboutDiv}
-          >
-            <h2>About</h2>
-          </div>
-          <div
-            className="container"
-            style={{
-              alignItems: "center",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Image
-              src={"/profile.png"}
-              width={200}
-              height={200}
-              alt=""
-              style={{ borderRadius: "100rem" }}
-            />
-            <p
+        <footer>
+          <div className="footer">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/christiandavenport.studio/"
               style={{
-                paddingTop: "1rem",
-                fontSize: "24px",
-                color: "whitesmoke",
-                fontWeight: "600",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "0.4rem",
               }}
             >
-              Christian Davenport
-            </p>
-            <p>Charlotte, NC</p>
-            <p className="bio">
-              I&apos;m Christian, a 3D Artist and Concept Designer proficient in
-              Blender, Substance Painter, and Unreal Engine. I create visually
-              stunning and technically sophisticated assets and environments for
-              games, films, and interactive media. Additionally, I regularly
-              utilize the Adobe Suite to enhance my creative workflow,
-              seamlessly integrating 2D and 3D elements, intricate texturing,
-              and compelling visual storytelling.
-            </p>
-            <div
-              className="icon-container"
-              style={{ marginTop: "2rem", gap: "1rem" }}
-            >
-              <Link
-                className="social-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.instagram.com/christiandavenport.studio/"
+              INSTAGRAM{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                width="16"
+                viewBox="0 0 448 512"
+                fill="whitesmoke"
+                style={{ transform: "rotate(-45deg)" }}
               >
-                <Image src={"/instagram.svg"} width={32} height={32} alt="" />
-              </Link>
-              <Link
-                className="social-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://dribbble.com/"
-              >
-                <Image src={"/dribbble.svg"} width={32} height={32} alt="" />
-              </Link>
-              <Link
-                className="social-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.unrealengine.com/marketplace/en-US/profile/christiandavenport.studio?count=20&sortBy=effectiveDate&sortDir=DESC&start=0"
-              >
-                <Image src={"/unreal.svg"} width={38} height={38} alt="" />
-              </Link>
-              <Link
-                className="social-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/christian-davenport-5228352ba/"
-              >
-                <Image src={"/linkedin.svg"} width={32} height={32} alt="" />
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="containerHolder">
-          <div style={{ paddingBottom: "2rem" }}>
-            <h2>Contact</h2>
-          </div>
-          <div
-            style={{
-              display: emailForm ? "none" : "block",
-              textAlign: "center",
-              paddingBlock: "10rem",
-            }}
-          >
-            <p style={{ color: "whitesmoke" }}>
-              Your message has been received.
-              <br />A response will follow shortly.
-            </p>
-          </div>
-          <form
-            onSubmit={handleSubmit}
-            style={{
-              display: emailForm ? "flex" : "none",
-            }}
-          >
-            <input
-              type="text"
-              placeholder="Name"
-              required
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-            <input
-              type="text"
-              placeholder="Topic"
-              required
-              onChange={(e) => setTopic(e.target.value)}
-              value={topic}
-            />
-            <textarea
-              placeholder="Message"
-              required
-              style={{ height: "12rem", resize: "none" }}
-              onChange={(e) => setMessage(e.target.value)}
-              value={message}
-            />
-            <div
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://dribbble.com/"
               style={{
-                width: "100%",
-                textAlign: "center",
-                marginTop: "2rem",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "0.4rem",
               }}
             >
-              <button type="submit">Submit</button>
-            </div>
-          </form>
-        </div>
+              DRIBBBLE
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                width="16"
+                viewBox="0 0 448 512"
+                fill="whitesmoke"
+                style={{ transform: "rotate(-45deg)" }}
+              >
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.unrealengine.com/marketplace/en-US/profile/christiandavenport.studio?count=20&sortBy=effectiveDate&sortDir=DESC&start=0"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "0.4rem",
+              }}
+            >
+              UNREAL MARKET{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                width="16"
+                viewBox="0 0 448 512"
+                fill="whitesmoke"
+                style={{ transform: "rotate(-45deg)" }}
+              >
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/christian-davenport-5228352ba/"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "0.4rem",
+              }}
+            >
+              LINKEDIN{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                width="16"
+                viewBox="0 0 448 512"
+                fill="whitesmoke"
+                style={{ transform: "rotate(-45deg)" }}
+              >
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
+            </Link>
+          </div>
+        </footer>
       </div>
     </main>
   );

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-export default function Home() {
+export default function Project() {
   return (
     <main>
       <div
@@ -32,7 +32,7 @@ export default function Home() {
           style={{
             alignItems: "flex-end",
             gap: "1rem",
-            marginBlock: "8rem",
+            marginBlock: "1.5rem",
             width: "95%",
           }}
         >
@@ -43,7 +43,9 @@ export default function Home() {
               top: "4rem",
             }}
           >
-            <Link href={"/"}>Back</Link>
+            <Link href={"/"}>
+              {"["} BACK {"]"}
+            </Link>
           </div>
           <div
             style={{
@@ -55,14 +57,51 @@ export default function Home() {
               width: "30%",
             }}
           >
-            <h1 style={{ fontSize: "clamp(36px, 8vw, 100px)" }}>3D Model</h1>
+            <h1
+              style={{ fontSize: "clamp(36px, 8vw, 100px)", lineHeight: "1.2" }}
+            >
+              Keyboard
+            </h1>
             <p>Expand Your Universe</p>
+            <br />
+            <div style={{ display: "flex", gap: "0.4rem" }}>
+              <p
+                style={{
+                  color: "black",
+                  borderRadius: "100rem",
+                  border: "1px solid #f5f5f580",
+                  width: "fit-content",
+                  padding: "0.8rem",
+                  paddingBlock: "0.2rem",
+                  fontWeight: "500",
+                  fontSize: "16px",
+                  background: "whitesmoke",
+                }}
+              >
+                Product Design
+              </p>
+              <p
+                style={{
+                  color: "black",
+                  borderRadius: "100rem",
+                  border: "1px solid #f5f5f580",
+                  width: "fit-content",
+                  padding: "0.8rem",
+                  paddingBlock: "0.2rem",
+                  fontWeight: "500",
+                  fontSize: "16px",
+                  background: "whitesmoke",
+                }}
+              >
+                2024
+              </p>
+            </div>
             <h2
               style={{
-                paddingTop: "4rem",
+                paddingTop: "6rem",
               }}
             >
-              About
+              Description
             </h2>
             <p>
               Augmented Reality (AR) and Virtual Reality (VR) bridge the digital
@@ -71,10 +110,13 @@ export default function Home() {
             </p>
           </div>
           <div className="cardShowcase">
-            <img className="img" src="/1.jpg" />
+            <img className="img" src="/anim1.gif" />
           </div>
           <div className="cardShowcase">
-            <img className="img" src="/1.jpg" />
+            <img className="img" src="/anim2.gif" />
+          </div>
+          <div className="cardShowcase">
+            <img className="img" src="/anim3.gif" />
           </div>
         </div>
       </div>
