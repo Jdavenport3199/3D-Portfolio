@@ -41,38 +41,6 @@ export default function Project() {
           <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
             Product Design, 2024
           </p>
-          {/* <div style={{ display: "flex", gap: "0.4rem", marginTop: "0.6rem" }}>
-            <p
-              style={{
-                color: "black",
-                borderRadius: "100rem",
-                border: "1px solid #f5f5f580",
-                width: "fit-content",
-                padding: "0.8rem",
-                paddingBlock: "0.2rem",
-                fontWeight: "400",
-                fontSize: "16px",
-                background: "whitesmoke",
-              }}
-            >
-              Product Design
-            </p>
-            <p
-              style={{
-                color: "black",
-                borderRadius: "100rem",
-                border: "1px solid #f5f5f580",
-                width: "fit-content",
-                padding: "0.8rem",
-                paddingBlock: "0.2rem",
-                fontWeight: "400",
-                fontSize: "16px",
-                background: "whitesmoke",
-              }}
-            >
-              2024
-            </p>
-          </div> */}
           <span className="description">Description</span>
           <p>
             Augmented Reality (AR) and Virtual Reality (VR) bridge the digital
@@ -81,12 +49,6 @@ export default function Project() {
           </p>
         </div>
         <div className="containerImg">
-          <div className="cardShowcase">
-            <img className="img" src="/anim1.gif" />
-          </div>
-          <div className="cardShowcase">
-            <img className="img" src="/anim2.gif" />
-          </div>
           <div className="cardShowcase">
             <img className="img" src="/anim3.gif" />
           </div>

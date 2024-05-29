@@ -42,10 +42,13 @@ export default function Home() {
   return (
     <main>
       <div className="nav" ref={nav}>
-        <button onClick={() => scrollTo(workDiv)}>
+        <button
+          onClick={() => scrollTo(workDiv)}
+          style={{ width: "350px", textAlign: "center" }}
+        >
           {"["} WORK {"]"}
         </button>
-        <Link href={"/contact"}>
+        <Link href={"/contact"} style={{ width: "350px", textAlign: "center" }}>
           {"["} CONTACT {"]"}
         </Link>
       </div>
@@ -74,10 +77,23 @@ export default function Home() {
 
       <div className="containerHolder">
         <div className="containerTitle">
+          <div className="notification">
+            <div className="blink">
+              <div className="blinking-dot"></div>
+              <div className="blinking-glow"></div>
+            </div>
+            <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
+              AVAILABLE FOR COMMISSIONS
+            </p>
+            <div className="blink">
+              <div className="blinking-dot"></div>
+              <div className="blinking-glow"></div>
+            </div>
+          </div>
           <h1>
             3D ARTIST
             <br />
-            CONCEPT DESIGNER
+            PRODUCT DESIGNER
           </h1>
           <div className="cardHolder">
             <div className="card-title">
@@ -94,7 +110,7 @@ export default function Home() {
                 <p>02</p>
                 <h2>
                   <br />
-                  Concept Design
+                  Product Design
                 </h2>
               </div>
             </div>
@@ -103,15 +119,10 @@ export default function Home() {
                 <p>03</p>
                 <h2>
                   <br />
-                  Game Ready Assets
+                  Game Assets
                 </h2>
               </div>
             </div>
-          </div>
-          <div className="notification">
-            <div className="blinking-dot"></div>
-            <p className="blink">AVAILABLE FOR FREELANCE</p>
-            <div className="blinking-dot"></div>
           </div>
         </div>
 
@@ -119,6 +130,51 @@ export default function Home() {
           <div className="cardHolder" style={{ justifyContent: "center" }}>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
               <img className="img" src="/Anim3.gif" />
+              <div
+                style={{
+                  position: "absolute",
+                  left: "2rem",
+                  bottom: "2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <h1
+                  style={{
+                    fontSize: "clamp(36px, 6vw, 100px)",
+                    lineHeight: "1.4",
+                  }}
+                >
+                  Keyboard
+                </h1>
+                <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
+                  Product Design, 2024
+                </p>
+              </div>
+            </Link>
+            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
+              <img className="img" src="/Anim3.gif" />
+              <div
+                style={{
+                  position: "absolute",
+                  left: "2rem",
+                  bottom: "2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <h1
+                  style={{
+                    fontSize: "clamp(36px, 6vw, 100px)",
+                    lineHeight: "1.4",
+                  }}
+                >
+                  Keyboard
+                </h1>
+                <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
+                  Product Design, 2024
+                </p>
+              </div>
             </Link>
           </div>
         </div>
