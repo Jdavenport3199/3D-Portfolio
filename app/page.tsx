@@ -119,9 +119,8 @@ export default function Home() {
                   paddingBottom: "2rem",
                   display: "flex",
                   flexDirection: "column",
-                  // backdropFilter: "blur(20px)",
-                  // WebkitBackdropFilter: "blur(20px)",
-                  // background: "#f5f5f505",
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
                 }}
               >
                 <h1
@@ -150,9 +149,8 @@ export default function Home() {
                   paddingBottom: "2rem",
                   display: "flex",
                   flexDirection: "column",
-                  // backdropFilter: "blur(20px)",
-                  // WebkitBackdropFilter: "blur(20px)",
-                  // background: "#f5f5f505",
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
                 }}
               >
                 <h1
