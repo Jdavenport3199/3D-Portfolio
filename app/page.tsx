@@ -41,14 +41,21 @@ export default function Home() {
 
   return (
     <main>
-      <div className="nav" ref={nav}>
-        <button className="nav-links" onClick={() => scrollTo(workDiv)}>
-          {"["} MY WORK {"]"}
-        </button>
-        <Link className="nav-links" href={"/contact"}>
-          {"["} CONTACT {"]"}
-        </Link>
-      </div>
+      <nav>
+        <div className="nav-dropdown">
+          <div className="nav-button">
+            <p className="menu">
+              {"["} MENU {"]"}
+            </p>
+            <button className="nav-link" onClick={() => scrollTo(workDiv)}>
+              {"["} WORK {"]"}
+            </button>
+            <Link href={"/contact"} className="nav-link">
+              {"["} CONTACT {"]"}
+            </Link>
+          </div>
+        </div>
+      </nav>
 
       <div className="background"></div>
       <div className="background-overlay"></div>
@@ -60,13 +67,9 @@ export default function Home() {
               <div className="blinking-dot"></div>
               <div className="blinking-glow"></div>
             </div>
-            <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
-              AVAILABLE FOR COMMISSIONS
+            <p style={{ fontSize: "clamp(18px, 2vw, 22px)" }}>
+              AVAILABLE FOR FREELANCE
             </p>
-            <div className="blink">
-              <div className="blinking-dot"></div>
-              <div className="blinking-glow"></div>
-            </div>
           </div>
           <h1 className="title">
             3D ARTIST
@@ -117,7 +120,7 @@ export default function Home() {
                   Keyboard
                 </h1>
                 <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
-                  Product Design, 2024
+                  PRODUCT DESIGN {"["} 2024 {"]"}
                 </p>
               </div>
             </Link>
@@ -132,7 +135,7 @@ export default function Home() {
                   Keyboard
                 </h1>
                 <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
-                  Product Design, 2024
+                  PRODUCT DESIGN {"["} 2024 {"]"}
                 </p>
               </div>
             </Link>
@@ -158,7 +161,7 @@ export default function Home() {
                 height="20"
                 width="16"
                 viewBox="0 0 448 512"
-                fill="whitesmoke"
+                fill="white"
                 style={{ transform: "rotate(-45deg)" }}
               >
                 <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
@@ -181,7 +184,7 @@ export default function Home() {
                 height="20"
                 width="16"
                 viewBox="0 0 448 512"
-                fill="whitesmoke"
+                fill="white"
                 style={{ transform: "rotate(-45deg)" }}
               >
                 <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
@@ -204,7 +207,7 @@ export default function Home() {
                 height="20"
                 width="16"
                 viewBox="0 0 448 512"
-                fill="whitesmoke"
+                fill="white"
                 style={{ transform: "rotate(-45deg)" }}
               >
                 <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
@@ -227,7 +230,7 @@ export default function Home() {
                 height="20"
                 width="16"
                 viewBox="0 0 448 512"
-                fill="whitesmoke"
+                fill="white"
                 style={{ transform: "rotate(-45deg)" }}
               >
                 <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />

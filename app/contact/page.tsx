@@ -56,14 +56,21 @@ export default function Contact() {
 
   return (
     <main>
-      <div className="nav" ref={nav}>
-        <Link className="nav-links" href={"/"}>
-          {"["} MY WORK {"]"}
-        </Link>
-        <Link className="nav-links" href={"/contact"}>
-          {"["} CONTACT {"]"}
-        </Link>
-      </div>
+      <nav>
+        <div className="nav-dropdown">
+          <div className="nav-button">
+            <p className="menu">
+              {"["} MENU {"]"}
+            </p>
+            <Link href={"/"} className="nav-link">
+              {"["} WORK {"]"}
+            </Link>
+            <Link href={"/contact"} className="nav-link">
+              {"["} CONTACT {"]"}
+            </Link>
+          </div>
+        </div>
+      </nav>
 
       <div className="background"></div>
       <div className="background-overlay"></div>
@@ -104,29 +111,29 @@ export default function Contact() {
         >
           <input
             type="text"
-            placeholder="Name"
+            placeholder="NAME"
             required
             onChange={(e) => setName(e.target.value)}
             value={name}
           />
           <input
             type="email"
-            placeholder="Email"
+            placeholder="EMAIL"
             required
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
           <input
             type="text"
-            placeholder="Topic"
+            placeholder="SUBJECT"
             required
             onChange={(e) => setTopic(e.target.value)}
             value={topic}
           />
           <textarea
-            placeholder="Message"
+            placeholder="MESSAGE"
             required
-            style={{ height: "12rem", resize: "none" }}
+            style={{ height: "14rem", resize: "none" }}
             onChange={(e) => setMessage(e.target.value)}
             value={message}
           />
