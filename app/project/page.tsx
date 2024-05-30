@@ -14,15 +14,11 @@ export default function Project() {
           </Link>
         </div>
         <div className="containerDescription">
-          <h1
-            style={{ fontSize: "clamp(36px, 6vw, 100px)", lineHeight: "1.4" }}
-          >
-            Keyboard
-          </h1>
+          <h1 style={{ fontSize: "clamp(36px, 6vw, 100px)" }}>Keyboard</h1>
           <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
             Product Design, 2024
           </p>
-          <span className="description">Description</span>
+          <h2 className="description">Description</h2>
           <p>
             Augmented Reality (AR) and Virtual Reality (VR) bridge the digital
             And physical worlds. They allow you to take in information and
@@ -30,6 +26,9 @@ export default function Project() {
           </p>
         </div>
         <div className="containerImg">
+          <div className="cardShowcase">
+            <img className="img" src="/1.jpg" />
+          </div>
           <div className="cardShowcase">
             <img className="img" src="/1.jpg" />
           </div>

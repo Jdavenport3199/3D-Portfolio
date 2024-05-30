@@ -68,7 +68,7 @@ export default function Home() {
               <div className="blinking-glow"></div>
             </div>
           </div>
-          <h1>
+          <h1 style={{ lineHeight: "1" }}>
             3D ARTIST
             <br />
             PRODUCT DESIGNER
@@ -108,25 +108,10 @@ export default function Home() {
           <div className="cardHolder" style={{ justifyContent: "center" }}>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
               <img className="img" src="/1.jpg" />
-              <div
-                style={{
-                  width: "100%",
-                  position: "absolute",
-                  left: "0",
-                  bottom: "0",
-                  paddingTop: "1rem",
-                  paddingLeft: "2rem",
-                  paddingBottom: "2rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  backdropFilter: "blur(20px)",
-                  WebkitBackdropFilter: "blur(20px)",
-                }}
-              >
+              <div className="overlay">
                 <h1
                   style={{
                     fontSize: "clamp(36px, 6vw, 64px)",
-                    lineHeight: "1.4",
                   }}
                 >
                   Keyboard
@@ -138,25 +123,10 @@ export default function Home() {
             </Link>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
               <img className="img" src="/1.jpg" />
-              <div
-                style={{
-                  width: "100%",
-                  position: "absolute",
-                  left: "0",
-                  bottom: "0",
-                  paddingTop: "1rem",
-                  paddingLeft: "2rem",
-                  paddingBottom: "2rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  backdropFilter: "blur(20px)",
-                  WebkitBackdropFilter: "blur(20px)",
-                }}
-              >
+              <div className="overlay">
                 <h1
                   style={{
                     fontSize: "clamp(36px, 6vw, 64px)",
-                    lineHeight: "1.4",
                   }}
                 >
                   Keyboard
