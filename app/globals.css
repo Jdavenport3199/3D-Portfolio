@@ -103,7 +103,7 @@
     transition: 0.3s;
     width: 100%;
     z-index: 3;
-    background: #f5f5f505;
+    /* background: #f5f5f505; */
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
   }
@@ -403,7 +403,7 @@
   .containerDescription {
     position: fixed;
     left: 2.5%;
-    top: 8rem;
+    top: 6rem;
     display: flex;
     flex-direction: column;
     width: 30%;
