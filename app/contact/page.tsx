@@ -13,14 +13,14 @@ export default function Contact() {
       if (currentScroll <= threshold && nav.current) {
         if (nav.current.style.top !== "0rem") {
           nav.current.style.top = "0rem";
-          nav.current.style.height = "5rem";
+          nav.current.style.height = "6rem";
         }
       } else if (currentScroll < lastScroll && nav.current) {
         nav.current.style.top = "0rem";
-        nav.current.style.height = "5rem";
+        nav.current.style.height = "6rem";
       } else if (currentScroll > lastScroll && nav.current) {
-        nav.current.style.top = "-5.25rem";
-        nav.current.style.height = "5rem";
+        nav.current.style.top = "-6.25rem";
+        nav.current.style.height = "6rem";
       }
       setLastScroll(currentScroll);
     };
@@ -57,35 +57,16 @@ export default function Contact() {
   return (
     <main>
       <div className="nav" ref={nav}>
-        <Link href={"/"} style={{ width: "350px", textAlign: "center" }}>
-          {"["} WORK {"]"}
+        <Link className="nav-links" href={"/"}>
+          {"["} MY WORK {"]"}
         </Link>
-        <Link href={"/contact"} style={{ width: "350px", textAlign: "center" }}>
+        <Link className="nav-links" href={"/contact"}>
           {"["} CONTACT {"]"}
         </Link>
       </div>
 
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          backgroundImage: "url(/background.jpg)",
-          backgroundPosition: "top center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-          position: "fixed",
-          opacity: "0.05",
-        }}
-      ></div>
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          backdropFilter: "blur(8px)",
-          WebkitBackdropFilter: "blur(8px)",
-          position: "fixed",
-        }}
-      ></div>
+      <div className="background"></div>
+      <div className="background-overlay"></div>
 
       <div className="containerHolder">
         <div

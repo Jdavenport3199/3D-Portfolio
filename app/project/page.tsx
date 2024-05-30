@@ -4,27 +4,8 @@ import Link from "next/link";
 export default function Project() {
   return (
     <main>
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          backgroundImage: "url(/background.jpg)",
-          backgroundPosition: "top center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-          position: "fixed",
-          opacity: "0.075",
-        }}
-      ></div>
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          backdropFilter: "blur(8px)",
-          WebkitBackdropFilter: "blur(8px)",
-          position: "fixed",
-        }}
-      ></div>
+      <div className="background"></div>
+      <div className="background-overlay"></div>
 
       <div className="containerHolder">
         <div className="containerBtn">
@@ -45,18 +26,12 @@ export default function Project() {
           <p>
             Augmented Reality (AR) and Virtual Reality (VR) bridge the digital
             And physical worlds. They allow you to take in information and
-            Content visually, in the same way you take in the world.
+            content visually, in the same way you take in the world.
           </p>
         </div>
         <div className="containerImg">
           <div className="cardShowcase">
-            <img className="img" src="/Anim1.gif" />
-          </div>
-          <div className="cardShowcase">
-            <img className="img" src="/Anim2.gif" />
-          </div>
-          <div className="cardShowcase">
-            <img className="img" src="/Anim3.gif" />
+            <img className="img" src="/1.jpg" />
           </div>
         </div>
       </div>

@@ -21,14 +21,14 @@ export default function Home() {
       if (currentScroll <= threshold && nav.current) {
         if (nav.current.style.top !== "0rem") {
           nav.current.style.top = "0rem";
-          nav.current.style.height = "5rem";
+          nav.current.style.height = "6rem";
         }
       } else if (currentScroll < lastScroll && nav.current) {
         nav.current.style.top = "0rem";
-        nav.current.style.height = "5rem";
+        nav.current.style.height = "6rem";
       } else if (currentScroll > lastScroll && nav.current) {
-        nav.current.style.top = "-5.25rem";
-        nav.current.style.height = "5rem";
+        nav.current.style.top = "-6.25rem";
+        nav.current.style.height = "6rem";
       }
       setLastScroll(currentScroll);
     };
@@ -42,38 +42,16 @@ export default function Home() {
   return (
     <main>
       <div className="nav" ref={nav}>
-        <button
-          onClick={() => scrollTo(workDiv)}
-          style={{ width: "350px", textAlign: "center" }}
-        >
-          {"["} WORK {"]"}
+        <button className="nav-links" onClick={() => scrollTo(workDiv)}>
+          {"["} MY WORK {"]"}
         </button>
-        <Link href={"/contact"} style={{ width: "350px", textAlign: "center" }}>
+        <Link className="nav-links" href={"/contact"}>
           {"["} CONTACT {"]"}
         </Link>
       </div>
 
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          backgroundImage: "url(/background.jpg)",
-          backgroundPosition: "top center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-          position: "fixed",
-          opacity: "0.075",
-        }}
-      ></div>
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          backdropFilter: "blur(8px)",
-          WebkitBackdropFilter: "blur(8px)",
-          position: "fixed",
-        }}
-      ></div>
+      <div className="background"></div>
+      <div className="background-overlay"></div>
 
       <div className="containerHolder">
         <div className="containerTitle">
@@ -129,19 +107,26 @@ export default function Home() {
         <div className="container" style={{ width: "100%" }} ref={workDiv}>
           <div className="cardHolder" style={{ justifyContent: "center" }}>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/Anim3.gif" />
+              <img className="img" src="/1.jpg" />
               <div
                 style={{
+                  width: "100%",
                   position: "absolute",
-                  left: "2rem",
-                  bottom: "2rem",
+                  left: "0",
+                  bottom: "0",
+                  paddingTop: "1rem",
+                  paddingLeft: "2rem",
+                  paddingBottom: "2rem",
                   display: "flex",
                   flexDirection: "column",
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
+                  background: "#f5f5f505",
                 }}
               >
                 <h1
                   style={{
-                    fontSize: "clamp(36px, 6vw, 100px)",
+                    fontSize: "clamp(36px, 6vw, 64px)",
                     lineHeight: "1.4",
                   }}
                 >
@@ -153,19 +138,26 @@ export default function Home() {
               </div>
             </Link>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/Anim3.gif" />
+              <img className="img" src="/1.jpg" />
               <div
                 style={{
+                  width: "100%",
                   position: "absolute",
-                  left: "2rem",
-                  bottom: "2rem",
+                  left: "0",
+                  bottom: "0",
+                  paddingTop: "1rem",
+                  paddingLeft: "2rem",
+                  paddingBottom: "2rem",
                   display: "flex",
                   flexDirection: "column",
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
+                  background: "#f5f5f505",
                 }}
               >
                 <h1
                   style={{
-                    fontSize: "clamp(36px, 6vw, 100px)",
+                    fontSize: "clamp(36px, 6vw, 64px)",
                     lineHeight: "1.4",
                   }}
                 >
