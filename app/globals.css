@@ -32,8 +32,12 @@
     color: whitesmoke;
     font-family: "Inter Tight", sans-serif;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.25;
     font-size: clamp(36px, 8vw, 140px)
+  }
+
+  .title {
+    line-height: 1.2;
   }
 
   /* h2 {
@@ -285,9 +289,9 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    padding-top: 0.6rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(20px);
@@ -344,7 +348,7 @@
 
   .containerTitle {
     width: 95%;
-    height: 75vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -391,6 +395,10 @@
 }
 
 @media (min-width: 1199px) {
+  .title {
+    line-height: 1;
+  }
+
   .nav-links {
     width: 200px;
   }
@@ -399,10 +407,14 @@
     width: 65%;
   }
 
-  .overlay {
+  /* .overlay {
     padding-top: 1rem;
     padding-left: 2rem;
     padding-bottom: 2rem;
+  } */
+
+  .containerTitle {
+    height: 80vh;
   }
 
   .containerImg {

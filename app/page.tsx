@@ -68,7 +68,7 @@ export default function Home() {
               <div className="blinking-glow"></div>
             </div>
           </div>
-          <h1 style={{ lineHeight: "1" }}>
+          <h1 className="title">
             3D ARTIST
             <br />
             PRODUCT DESIGNER
