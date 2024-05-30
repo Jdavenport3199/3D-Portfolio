@@ -170,7 +170,7 @@ export default function Home() {
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="https://dribbble.com/"
+              href="https://dribbble.com/christiandavenport/shots"
               style={{
                 display: "flex",
                 justifyContent: "center",

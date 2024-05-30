@@ -390,7 +390,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: fixed;
-    opacity: 0.05;
+    opacity: 0.025;
   }
 
   .background-overlay {
@@ -429,13 +429,11 @@
   .containerDescription {
     position: fixed;
     left: 2.5%;
-    top: 8rem;
     bottom: 4rem;
     display: flex;
     flex-direction: column;
     width: 30%;
     margin-top: 0;
-    justify-content: space-between;
   }
 
   .container {
