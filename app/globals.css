@@ -32,7 +32,7 @@
     color: white;
     font-family: "Inter Tight", sans-serif;
     font-weight: 800;
-    line-height: 1.4;
+    line-height: 1.2;
     font-size: clamp(38px, 8vw, 140px)
   }
 
@@ -150,7 +150,7 @@
 
   input,
   textarea {
-    font-size: clamp(16px, 2vw, 18px);
+    font-size: clamp(14px, 2vw, 16px);
     padding: 1rem;
     border: 1px solid transparent;
     background: #ffffff10;
@@ -161,7 +161,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     -webkit-border-radius: 0;
-    border-radius: 1rem;
+    border-radius: 2rem;
     transition: 150ms linear;
     outline: none;
   }
@@ -375,11 +375,15 @@
 
   .footer {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
-    width: 90%;
+    width: 95%;
+
+    a {
+      font-size: clamp(14px, 2vw, 16px);
+    }
   }
 
   .background {
@@ -416,7 +420,7 @@
   }
 
   .containerTitle {
-    height: 80vh;
+    height: 75vh;
     margin-top: 0rem;
   }
 
