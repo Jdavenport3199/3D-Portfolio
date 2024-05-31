@@ -216,7 +216,7 @@ export default function Home() {
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/christian-davenport-5228352ba/"
+              href="https://www.linkedin.com/in/christiandavenportstudio/"
               style={{
                 display: "flex",
                 justifyContent: "center",
