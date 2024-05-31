@@ -84,20 +84,16 @@ export default function Contact() {
             className="card-title"
             style={{
               display: emailForm ? "flex" : "none",
-              maxWidth: "90%",
+              maxWidth: "92.5%",
               justifyContent: "left",
             }}
           >
-            <div className="description" style={{ paddingBottom: "1rem" }}>
-              {/* <p>01</p> */}
-              <h2>
-                <br />
-                Contact
-              </h2>
-              <br />
-              <p>
-                I’M CURRENTLY AVAILABLE FOR FREELANCE PROJECTS. EMAIL ME FOR
-                INQUIRIES.
+            <div style={{ paddingBottom: "1rem" }}>
+              <div className="description">
+                <h2>Contact</h2>
+              </div>
+              <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
+                {"["} INQUIRY FORM {"]"}
               </p>
             </div>
           </div>
@@ -118,7 +114,7 @@ export default function Contact() {
             onSubmit={handleSubmit}
             style={{
               display: emailForm ? "flex" : "none",
-              width: "90%",
+              width: "92.5%",
               marginBottom: "4rem",
             }}
           >
@@ -154,31 +150,30 @@ export default function Contact() {
             <button
               type="submit"
               style={{
-                width: "95%",
-                padding: "1.1rem",
-                borderRadius: "2rem",
+                width: "100%",
+                paddingBlock: "1rem",
+                borderRadius: "1rem",
                 color: "black",
                 textAlign: "center",
                 background: "white",
-                fontWeight: "500"
+                fontWeight: "600",
+                fontSize: "clamp(14px, 2vw, 16px)",
               }}
             >
-              SUBMIT
+              {"["} SUBMIT {"]"}
             </button>
           </form>
         </div>
-        <div
-          className="card"
-          style={{
-            opacity: "1",
-            marginRight: "2.5%",
-            marginBottom: "4rem",
-            width: "100%",
-            height: "75vh",
-          }}
-        >
-          <img className="img" src="/test.jpg" />
-        </div>
+        <video
+          className="cardContact"
+          src="/Plants.mp4"
+          width="1920"
+          height="1080"
+          autoPlay
+          loop
+          playsInline
+          muted
+        />
       </div>
 
       <footer>

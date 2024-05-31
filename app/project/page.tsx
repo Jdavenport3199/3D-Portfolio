@@ -34,31 +34,13 @@ export default function Project() {
           </div>
           <div>
             <div className="description">
-              {/* <p>01</p> */}
-              <h2>
-                <br />
-                About
-              </h2>
+              <h2>About</h2>
             </div>
             <p>
               AUGMENTED REALITY (AR) AND VIRTUAL REALITY (VR) BRIDGE THE DIGITAL
               AND PHYSICAL WORLDS. THEY ALLOW YOU TO TAKE IN INFORMATION AND
               CONTENT VISUALLY, IN THE SAME WAY YOU TAKE IN THE WORLD.
             </p>
-            <br />
-            <div className="description">
-              {/* <p>02</p> */}
-              <h2>
-                <br />
-                Details
-              </h2>
-            </div>
-            <ul>
-              <li>AUGMENTED REALITY</li>
-              <li>VIRTUAL REALITY</li>
-              <li>DIGITAL AND PHYSICAL WORLDS</li>
-              <li>INFORMATION AND CONTENT VISUALLY</li>
-            </ul>
           </div>
         </div>
         <div className="containerImg">
