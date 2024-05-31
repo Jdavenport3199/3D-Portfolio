@@ -84,16 +84,17 @@ export default function Contact() {
             className="card-title"
             style={{
               display: emailForm ? "flex" : "none",
-              maxWidth: "92.5%",
+              maxWidth: "90%",
               justifyContent: "left",
             }}
           >
-            <div style={{ paddingBottom: "1rem" }}>
+            <div style={{ paddingBottom: "2rem" }}>
               <div className="description">
                 <h2>Contact</h2>
               </div>
-              <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
-                {"["} INQUIRY FORM {"]"}
+              <p>
+                I’M CURRENTLY AVAILABLE FOR FREELANCE PROJECTS, EMAIL ME FOR
+                INQUIRIES.
               </p>
             </div>
           </div>
@@ -114,7 +115,7 @@ export default function Contact() {
             onSubmit={handleSubmit}
             style={{
               display: emailForm ? "flex" : "none",
-              width: "92.5%",
+              width: "90%",
               marginBottom: "4rem",
             }}
           >
@@ -151,7 +152,7 @@ export default function Contact() {
               type="submit"
               style={{
                 width: "100%",
-                paddingBlock: "1rem",
+                paddingBlock: "1.4rem",
                 borderRadius: "1rem",
                 color: "black",
                 textAlign: "center",
@@ -164,7 +165,20 @@ export default function Contact() {
             </button>
           </form>
         </div>
-        <video
+        <div
+          className="cardContactHolder"
+          style={{
+            width: "100%",
+            overflow: "hidden",
+            marginBottom: "4rem",
+            marginRight: "2.5%",
+            height: "85vh",
+            borderRadius: "2rem",
+          }}
+        >
+          <img className="cardContact" src="/test.jpg" />
+        </div>
+        {/* <video
           className="cardContact"
           src="/Plants.mp4"
           width="1920"
@@ -173,7 +187,7 @@ export default function Contact() {
           loop
           playsInline
           muted
-        />
+        /> */}
       </div>
 
       <footer>

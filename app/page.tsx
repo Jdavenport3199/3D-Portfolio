@@ -110,61 +110,16 @@ export default function Home() {
         <div className="container" style={{ width: "100%" }} ref={workDiv}>
           <div className="cardHolder" style={{ justifyContent: "center" }}>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/1.jpg" />
+              <img className="img" src="/Anim3.gif" />
               <div className="overlay">
                 <h1
                   style={{
-                    fontSize: "clamp(36px, 6vw, 64px)",
+                    fontSize: "clamp(48px, 6vw, 64px)",
                   }}
                 >
                   Keyboard
                 </h1>
-                <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
-                  PRODUCT DESIGN {"["} 2024 {"]"}
-                </p>
-              </div>
-            </Link>
-            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/1.jpg" />
-              <div className="overlay">
-                <h1
-                  style={{
-                    fontSize: "clamp(36px, 6vw, 64px)",
-                  }}
-                >
-                  Keyboard
-                </h1>
-                <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
-                  PRODUCT DESIGN {"["} 2024 {"]"}
-                </p>
-              </div>
-            </Link>
-            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/1.jpg" />
-              <div className="overlay">
-                <h1
-                  style={{
-                    fontSize: "clamp(36px, 6vw, 64px)",
-                  }}
-                >
-                  Keyboard
-                </h1>
-                <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
-                  PRODUCT DESIGN {"["} 2024 {"]"}
-                </p>
-              </div>
-            </Link>
-            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/1.jpg" />
-              <div className="overlay">
-                <h1
-                  style={{
-                    fontSize: "clamp(36px, 6vw, 64px)",
-                  }}
-                >
-                  Keyboard
-                </h1>
-                <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
+                <p>
                   PRODUCT DESIGN {"["} 2024 {"]"}
                 </p>
               </div>

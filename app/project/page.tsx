@@ -26,9 +26,9 @@ export default function Project() {
       <div className="containerHolder">
         <div className="containerDescription">
           <div>
-            <h1 style={{ fontSize: "clamp(36px, 6vw, 100px)" }}>Keyboard</h1>
+            <h1 style={{ fontSize: "clamp(48px, 6vw, 100px)" }}>Keyboard</h1>
             <br />
-            <p style={{ fontSize: "clamp(16px, 2vw, 18px)" }}>
+            <p>
               PRODUCT DESIGN {"["} 2024 {"]"}
             </p>
           </div>
@@ -45,10 +45,13 @@ export default function Project() {
         </div>
         <div className="containerImg">
           <div className="cardShowcase">
-            <img className="img" src="/1.jpg" />
+            <img className="img" src="/Anim1.gif" />
           </div>
           <div className="cardShowcase">
-            <img className="img" src="/1.jpg" />
+            <img className="img" src="/Anim2.gif" />
+          </div>
+          <div className="cardShowcase">
+            <img className="img" src="/Anim3.gif" />
           </div>
         </div>
       </div>
