@@ -110,7 +110,7 @@ export default function Home() {
         <div className="container" style={{ width: "100%" }} ref={workDiv}>
           <div className="cardHolder" style={{ justifyContent: "center" }}>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/Anim3.gif" />
+              <img className="img" src="/1.jpg" />
               <div className="overlay">
                 <h1
                   style={{
