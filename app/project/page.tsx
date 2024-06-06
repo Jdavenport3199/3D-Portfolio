@@ -5,9 +5,6 @@ export default function Project() {
   return (
     <main>
       <div className="logo">
-        <span>Christian Davenport</span>
-        <p>3D ARTIST / DIGITAL DESIGNER</p>
-        <br />
         <Link href={"/"}>
           {"["} BACK {"]"}
         </Link>
@@ -25,9 +22,7 @@ export default function Project() {
               PRODUCT DESIGN {"["} 2024 {"]"}
             </p>
           </div>
-            <div className="description">
-              {/* <h2>About</h2> */}
-            
+          <div className="description">
             <p>
               THE NEXT-GEN KEYBOARD COMBINES ERGONOMICS AND STYLE, ELEVATING
               YOUR TYPING EXPERIENCE TO NEW HEIGHTS. IT OFFERS PRECISION AND
@@ -42,11 +37,11 @@ export default function Project() {
               rel="noopener noreferrer"
             >
               {"["} VIDEO {"]"}
-            </Link></div>
+            </Link>
+          </div>
         </div>
         <div className="containerImg">
           <div className="cardShowcase">
-            {/* <img className="img" src="/1.jpg" /> */}
             <video
               className="img"
               src="KeyboardExport.mp4"

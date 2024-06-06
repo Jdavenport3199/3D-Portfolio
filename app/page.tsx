@@ -41,10 +41,6 @@ export default function Home() {
 
   return (
     <main>
-      <div className="logo">
-        <span>Christian Davenport</span>
-        <p>3D ARTIST / DIGITAL DESIGNER</p>
-      </div>
       <nav>
         <div className="nav-dropdown">
           <div className="nav-button">
@@ -52,9 +48,6 @@ export default function Home() {
             <button className="nav-link" onClick={() => scrollTo(workDiv)}>
               {"["} KEYBOARD {"]"}
             </button>
-            {/* <Link href={"/contact"} className="nav-link">
-              CONTACT
-            </Link> */}
           </div>
         </div>
       </nav>
@@ -82,7 +75,7 @@ export default function Home() {
             <br />
             DIGITAL DESIGNER
           </h1>
-          <div className="cardHolder" style={{ paddingTop: "4rem" }}>
+          <div className="cardTitleHolder">
             <div className="card-title">
               <div>
                 <p>01&nbsp;</p>
@@ -110,7 +103,6 @@ export default function Home() {
         <div className="container" style={{ width: "100%" }} ref={workDiv}>
           <div className="cardHolder" style={{ justifyContent: "center" }}>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              {/* <img className="img" src="/1.jpg" /> */}
               <video
                 className="vid"
                 src="KeyboardExport.mp4"
