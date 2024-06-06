@@ -38,14 +38,15 @@
 
   .title {
     line-height: 1.2;
+    font-family: "Inter", sans-serif;
   }
 
   h2 {
     display: inline;
     color: white;
     font-family: "Inter Tight", sans-serif;
-    font-weight: 500;
-    font-size: clamp(24px, 2vw, 36px)
+    font-weight: 400;
+    font-size: clamp(24px, 2vw, 32px)
   }
 
   p,
@@ -62,7 +63,7 @@
   }
 
   span {
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Inter", sans-serif;
     display: inline;
     color: white;
     font-size: clamp(20px, 2vw, 24px);
@@ -125,6 +126,8 @@
     justify-content: center;
     align-items: center;
     top: 1.5rem;
+
+    display: none;
   }
 
   .nav-dropdown {
@@ -229,57 +232,52 @@
   .blinking-dot {
     width: 0.6rem;
     aspect-ratio: 1/1;
-    background-color: white;
+    background-color: rgb(112, 228, 137);
     border-radius: 100rem;
-    animation: blink 3.5s infinite;
+    animation: blink 5s infinite;
     position: absolute;
   }
 
   @keyframes blink {
     0% {
-      opacity: 1;
-      scale: 1;
+      opacity: 0.4;
+      scale: 0.65;
     }
 
     50% {
-      opacity: 0.6;
-      scale: 0.8;
+      opacity: 1;
+      scale: 1;
     }
 
     100% {
-      opacity: 1;
-      scale: 1;
+      opacity: 0.4;
+      scale: 0.65;
     }
   }
 
   .blinking-glow {
     width: 0.6rem;
     aspect-ratio: 1/1;
-    box-shadow: 0px 0px 8px 4px rgba(245, 245, 245, 0.4);
+    box-shadow: 0px 0px 8px 4px rgb(112, 228, 137, 0.65);
     border-radius: 100rem;
-    animation: glow 3.5s infinite;
+    animation: glow 5s infinite;
     position: absolute;
   }
 
   @keyframes glow {
     0% {
-      opacity: 0.8;
-      scale: 1;
-    }
-
-    40% {
       opacity: 0;
       scale: 0;
     }
 
-    80% {
-      opacity: 0.8;
-      scale: 1;
+    50% {
+      opacity: 1;
+      scale: .95;
     }
 
     100% {
-      opacity: 0.8;
-      scale: 1;
+      opacity: 0;
+      scale: 0;
     }
   }
 
@@ -357,7 +355,7 @@
   }
 
   .description {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 
   .container {
@@ -371,7 +369,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 8rem;
   }
 
   footer {
@@ -437,6 +435,7 @@
 
   .containerTitle {
     height: 70vh;
+    margin-top: 4rem;
   }
 
   .containerImg {
@@ -454,6 +453,10 @@
     flex-direction: column;
     width: 30%;
     margin-top: 0;
+  }
+
+  .description {
+    padding-top: 2rem;
   }
 
   .container {
@@ -475,12 +478,13 @@
   }
 
   nav {
+    display: flex;
     top: 2.5rem;
   }
 
   .overlay {
-    padding-left: 6rem;
-    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
   }
 
   .card {

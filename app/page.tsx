@@ -48,7 +48,7 @@ export default function Home() {
       <nav>
         <div className="nav-dropdown">
           <div className="nav-button">
-            <p className="menu">WORK</p>
+            <p className="menu">MY WORK</p>
             <button className="nav-link" onClick={() => scrollTo(workDiv)}>
               {"["} KEYBOARD {"]"}
             </button>
@@ -64,7 +64,7 @@ export default function Home() {
 
       <div className="containerHolder">
         <div className="containerTitle">
-          {/* <div className="notification">
+          <div className="notification">
             <div className="blink">
               <div className="blinking-dot"></div>
               <div className="blinking-glow"></div>
@@ -72,7 +72,11 @@ export default function Home() {
             <p style={{ fontSize: "clamp(18px, 2vw, 22px)" }}>
               AVAILABLE FOR FREELANCE
             </p>
-          </div> */}
+            <div className="blink">
+              <div className="blinking-dot"></div>
+              <div className="blinking-glow"></div>
+            </div>
+          </div>
           <h1 className="title">
             3D ARTIST
             <br />
@@ -80,16 +84,25 @@ export default function Home() {
           </h1>
           <div className="cardHolder" style={{ paddingTop: "4rem" }}>
             <div className="card-title">
-              <p>01&nbsp;</p>
-              <h2>3D Modeling</h2>
+              <div>
+                <p>01&nbsp;</p>
+                <br />
+                <h2>3D Modeling</h2>
+              </div>
             </div>
             <div className="card-title">
-              <p>02&nbsp;</p>
-              <h2>Product Design</h2>
+              <div>
+                <p>02&nbsp;</p>
+                <br />
+                <h2>Product Design</h2>
+              </div>
             </div>
             <div className="card-title">
-              <p>03&nbsp;</p>
-              <h2>Game Assets</h2>
+              <div>
+                <p>03&nbsp;</p>
+                <br />
+                <h2>Game Assets</h2>
+              </div>
             </div>
           </div>
         </div>
@@ -172,7 +185,7 @@ export default function Home() {
                 <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
               </svg>
             </Link>
-            <Link
+            {/* <Link
               target="_blank"
               rel="noopener noreferrer"
               href="https://dribbble.com/christiandavenport/shots"
@@ -194,7 +207,7 @@ export default function Home() {
               >
                 <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
               </svg>
-            </Link>
+            </Link> */}
             <Link
               target="_blank"
               rel="noopener noreferrer"
@@ -206,7 +219,7 @@ export default function Home() {
                 gap: "0.4rem",
               }}
             >
-              UNREAL MARKET{" "}
+              UNREAL MARKETPLACE{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="20"
@@ -218,7 +231,7 @@ export default function Home() {
                 <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
               </svg>
             </Link>
-            <Link
+            {/* <Link
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/christiandavenportstudio/"
@@ -230,6 +243,29 @@ export default function Home() {
               }}
             >
               LINKEDIN{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                width="16"
+                viewBox="0 0 448 512"
+                fill="white"
+                style={{ transform: "rotate(-45deg)" }}
+              >
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
+            </Link> */}
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:christiandavenport.studio@gmail.com"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "0.4rem",
+              }}
+            >
+              EMAIL{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="20"

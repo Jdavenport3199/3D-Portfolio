@@ -25,27 +25,24 @@ export default function Project() {
               PRODUCT DESIGN {"["} 2024 {"]"}
             </p>
           </div>
-          <div>
             <div className="description">
-              <h2>About</h2>
-            </div>
+              {/* <h2>About</h2> */}
+            
             <p>
               THE NEXT-GEN KEYBOARD COMBINES ERGONOMICS AND STYLE, ELEVATING
               YOUR TYPING EXPERIENCE TO NEW HEIGHTS. IT OFFERS PRECISION AND
               COMFORT, TRANSFORMING THE WAY YOU INTERACT WITH YOUR DEVICE.
               <br />
               <br />
-              VIEW THE FULL VIDEO BELOW.
+              VIEW THE FULL&nbsp;
             </p>
-            <br />
             <Link
               href={"https://www.youtube.com/"}
               target="_blank"
               rel="noopener noreferrer"
             >
               {"["} VIDEO {"]"}
-            </Link>
-          </div>
+            </Link></div>
         </div>
         <div className="containerImg">
           <div className="cardShowcase">
