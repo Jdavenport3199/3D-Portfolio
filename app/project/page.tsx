@@ -5,7 +5,7 @@ export default function Project() {
   return (
     <main>
       <div className="logo">
-        <span>CHRISTIAN DAVENPORT</span>
+        <span>Christian Davenport</span>
         <p>3D ARTIST / DIGITAL DESIGNER</p>
         <br />
         <Link href={"/"}>
@@ -43,7 +43,7 @@ export default function Project() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {"["} TRAILER {"]"}
+              {"["} VIDEO {"]"}
             </Link>
           </div>
         </div>

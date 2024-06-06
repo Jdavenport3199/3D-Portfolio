@@ -42,15 +42,15 @@ export default function Home() {
   return (
     <main>
       <div className="logo">
-        <span>CHRISTIAN DAVENPORT</span>
+        <span>Christian Davenport</span>
         <p>3D ARTIST / DIGITAL DESIGNER</p>
       </div>
       <nav>
         <div className="nav-dropdown">
           <div className="nav-button">
-            <p className="menu">MENU</p>
+            <p className="menu">WORK</p>
             <button className="nav-link" onClick={() => scrollTo(workDiv)}>
-              WORK
+              {"["} KEYBOARD {"]"}
             </button>
             {/* <Link href={"/contact"} className="nav-link">
               CONTACT
