@@ -41,16 +41,7 @@ export default function Home() {
 
   return (
     <main>
-      <div
-        style={{
-          position: "fixed",
-          left: "2.5%",
-          top: "2.5rem",
-          zIndex: 3,
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+      <div className="logo">
         <span>CHRISTIAN DAVENPORT</span>
         <p>3D ARTIST / DIGITAL DESIGNER</p>
       </div>
