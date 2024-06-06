@@ -109,7 +109,7 @@
   }
 
   .logo {
-    position: fixed;
+    position: absolute;
     left: 5%;
     top: 1.5rem;
     z-index: 3;
