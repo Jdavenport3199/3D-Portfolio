@@ -41,18 +41,29 @@ export default function Home() {
 
   return (
     <main>
+      <div
+        style={{
+          position: "fixed",
+          left: "2.5%",
+          top: "2.5rem",
+          zIndex: 3,
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <span>CHRISTIAN DAVENPORT</span>
+        <p>3D ARTIST / DIGITAL DESIGNER</p>
+      </div>
       <nav>
         <div className="nav-dropdown">
           <div className="nav-button">
-            <p className="menu">
-              {"["} MENU {"]"}
-            </p>
+            <p className="menu">MENU</p>
             <button className="nav-link" onClick={() => scrollTo(workDiv)}>
-              {"["} WORK {"]"}
+              WORK
             </button>
-            <Link href={"/contact"} className="nav-link">
-              {"["} CONTACT {"]"}
-            </Link>
+            {/* <Link href={"/contact"} className="nav-link">
+              CONTACT
+            </Link> */}
           </div>
         </div>
       </nav>
@@ -62,7 +73,7 @@ export default function Home() {
 
       <div className="containerHolder">
         <div className="containerTitle">
-          <div className="notification">
+          {/* <div className="notification">
             <div className="blink">
               <div className="blinking-dot"></div>
               <div className="blinking-glow"></div>
@@ -70,47 +81,42 @@ export default function Home() {
             <p style={{ fontSize: "clamp(18px, 2vw, 22px)" }}>
               AVAILABLE FOR FREELANCE
             </p>
-          </div>
+          </div> */}
           <h1 className="title">
             3D ARTIST
             <br />
             DIGITAL DESIGNER
           </h1>
-          {/* <div className="cardHolder">
+          <div className="cardHolder" style={{ paddingTop: "4rem" }}>
             <div className="card-title">
-              <div>
-                <p>01</p>
-                <h2>
-                  <br />
-                  3D Modeling
-                </h2>
-              </div>
+              <p>01&nbsp;</p>
+              <h2>3D Modeling</h2>
             </div>
             <div className="card-title">
-              <div>
-                <p>02</p>
-                <h2>
-                  <br />
-                  Product Design
-                </h2>
-              </div>
+              <p>02&nbsp;</p>
+              <h2>Product Design</h2>
             </div>
             <div className="card-title">
-              <div>
-                <p>03</p>
-                <h2>
-                  <br />
-                  Game Assets
-                </h2>
-              </div>
+              <p>03&nbsp;</p>
+              <h2>Game Assets</h2>
             </div>
-          </div> */}
+          </div>
         </div>
 
         <div className="container" style={{ width: "100%" }} ref={workDiv}>
           <div className="cardHolder" style={{ justifyContent: "center" }}>
             <Link className="card" href={"/project"} style={{ opacity: "1" }}>
-              <img className="img" src="/1.jpg" />
+              {/* <img className="img" src="/1.jpg" /> */}
+              <video
+                className="vid"
+                src="KeyboardExport.mp4"
+                width="0"
+                height="1080"
+                autoPlay
+                loop
+                playsInline
+                muted
+              />
               <div className="overlay">
                 <h1
                   style={{
@@ -129,6 +135,29 @@ export default function Home() {
 
         <footer>
           <div className="footer">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/christiandavenport.studio/"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "0.4rem",
+              }}
+            >
+              YOUTUBE{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                width="16"
+                viewBox="0 0 448 512"
+                fill="white"
+                style={{ transform: "rotate(-45deg)" }}
+              >
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
+            </Link>
             <Link
               target="_blank"
               rel="noopener noreferrer"

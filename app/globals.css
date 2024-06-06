@@ -33,7 +33,7 @@
     font-family: "Inter Tight", sans-serif;
     font-weight: 800;
     line-height: 1.2;
-    font-size: clamp(38px, 8vw, 140px)
+    font-size: clamp(38px, 8vw, 120px)
   }
 
   .title {
@@ -45,7 +45,7 @@
     color: white;
     font-family: "Inter Tight", sans-serif;
     font-weight: 500;
-    font-size: clamp(24px, 8vw, 48px)
+    font-size: clamp(24px, 2vw, 36px)
   }
 
   p,
@@ -62,10 +62,11 @@
   }
 
   span {
+    font-family: "Inter Tight", sans-serif;
     display: inline;
     color: white;
     font-size: clamp(20px, 2vw, 24px);
-    font-weight: 400;
+    font-weight: 800;
     line-height: 1.4;
   }
 
@@ -79,6 +80,7 @@
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
+    line-height: 1.4;
   }
 
   a:hover,
@@ -113,7 +115,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 2rem;
+    top: 1.5rem;
   }
 
   .nav-dropdown {
@@ -148,6 +150,11 @@
     transition: 300ms ease-in-out;
   }
 
+  .vid {
+    width: 100%;
+    object-fit: cover;
+  }
+
   input,
   textarea {
     line-height: 1.6;
@@ -167,19 +174,6 @@
     outline: none;
   }
 
-  /* input:hover,
-  textarea:hover {
-    outline: none;
-    border: 1px solid #ffffff40;
-    transition: 150ms linear;
-  }
-
-  input:focus,
-  textarea:focus {
-    outline: none;
-    border: 1px solid white;
-  } */
-
   ::placeholder {
     color: #ffffff80;
     opacity: 1;
@@ -197,7 +191,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
   }
 
   .card-title {
@@ -284,14 +278,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 2rem;
     background: #ffffff10;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    width: 95%;
+    width: 98%;
     height: 95vh;
+    border: 1px solid #ffffff80;
     position: relative;
     overflow: hidden;
+    transition: 150ms linear;
+  }
+
+  .card:hover {
+    border: 1px solid #ffffff;
     transition: 150ms linear;
   }
 
@@ -303,26 +302,23 @@
     height: auto;
   }
 
-  .card:hover {
+  /* .card:hover {
     .img {
       cursor: pointer;
       scale: 1.05;
       transition: 300ms ease-in-out;
     }
-  }
+  } */
 
   .overlay {
     width: 100%;
     position: absolute;
     left: 0;
     bottom: 0;
-    padding-top: 1.2rem;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    /* backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); */
   }
 
   .containerHolder,
@@ -338,7 +334,6 @@
   .containerImg {
     align-items: center;
     gap: 0.6rem;
-    margin-top: 2rem;
     width: 100%;
     z-index: 2;
   }
@@ -348,6 +343,7 @@
     flex-direction: column;
     width: 90%;
     margin-top: 6rem;
+    z-index: 3;
   }
 
   .description {
@@ -360,7 +356,7 @@
 
   .containerTitle {
     width: 95%;
-    height: 40vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -398,7 +394,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: fixed;
-    opacity: 0.025;
+    opacity: 0.05;
   }
 
   .background-overlay {
@@ -424,14 +420,14 @@
   }
 
   .containerTitle {
-    height: 65vh;
+    height: 70vh;
   }
 
   .containerImg {
     gap: 1rem;
     align-items: flex-end;
     width: 95%;
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
   }
 
   .containerDescription {
@@ -457,16 +453,17 @@
     padding: 1.4rem;
   }
 
-  .nav {
-    gap: 4rem;
+  nav {
+    top: 2.5rem;
   }
 
-  .card {
-    width: 48%;
+  .overlay {
+    padding-left: 6rem;
+    padding-bottom: 4rem;
   }
 
   .cardShowcase {
-    width: 60%;
+    width: 65%;
   }
 
   .cardContactHolder {

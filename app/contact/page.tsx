@@ -56,18 +56,29 @@ export default function Contact() {
 
   return (
     <main>
+      <div
+        style={{
+          position: "fixed",
+          left: "3.75%",
+          top: "3rem",
+          zIndex: 3,
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <span>CHRISTIAN DAVENPORT</span>
+        <p>3D ARTIST / DIGITAL DESIGNER</p>
+      </div>
       <nav>
         <div className="nav-dropdown">
           <div className="nav-button">
-            <p className="menu">
-              {"["} MENU {"]"}
-            </p>
+            <p className="menu">MENU</p>
             <Link href={"/"} className="nav-link">
-              {"["} WORK {"]"}
+              WORK
             </Link>
-            <Link href={"/contact"} className="nav-link">
-              {"["} CONTACT {"]"}
-            </Link>
+            {/* <Link href={"/contact"} className="nav-link">
+              CONTACT
+            </Link> */}
           </div>
         </div>
       </nav>
