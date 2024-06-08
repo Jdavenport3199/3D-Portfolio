@@ -5,9 +5,7 @@ export default function Project() {
   return (
     <main>
       <div className="logo">
-        <Link href={"/"}>
-          {"["} BACK {"]"}
-        </Link>
+        <Link href={"/"}>BACK</Link>
       </div>
 
       <div className="background"></div>
@@ -16,29 +14,26 @@ export default function Project() {
       <div className="containerHolder">
         <div className="containerDescription">
           <div>
-            <h1 style={{ fontSize: "clamp(48px, 6vw, 100px)" }}>Keyboard</h1>
+            <h1>KEYBOARD</h1>
             <br />
-            <p>
+            <span style={{ color: "white" }}>
               PRODUCT DESIGN {"["} 2024 {"]"}
-            </p>
+            </span>
           </div>
           <div className="description">
             <p>
               THE NEXT-GEN KEYBOARD COMBINES ERGONOMICS AND STYLE, ELEVATING
               YOUR TYPING EXPERIENCE TO NEW HEIGHTS. IT OFFERS PRECISION AND
               COMFORT, TRANSFORMING THE WAY YOU INTERACT WITH YOUR DEVICE.
-              <br />
-              <br />
-              VIEW THE FULL&nbsp;
             </p>
-            <Link
-              href={"https://www.youtube.com/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {"["} VIDEO {"]"}
-            </Link>
           </div>
+          <Link
+            href={"https://www.youtube.com/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            VIEW THE FULL VIDEO
+          </Link>
         </div>
         <div className="containerImg">
           <div className="cardShowcase">
