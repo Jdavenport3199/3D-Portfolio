@@ -1,9 +1,12 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import { BeatLoader } from "react-spinners";
 
 export default function Home() {
-  const workDiv = useRef<HTMLDivElement>(null);
+  const pistolDiv = useRef<HTMLDivElement>(null);
+  const keyboardDiv = useRef<HTMLDivElement>(null);
 
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
@@ -11,33 +14,15 @@ export default function Home() {
     }
   };
 
-  const [lastScroll, setLastScroll] = useState(0);
-  const nav = useRef<HTMLDivElement>(null);
+  const GuitarScene = dynamic(() => import("./components/GuitarScene"), {
+    ssr: false,
+    loading: () => <BeatLoader color="#ffffff80" />,
+  });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      const threshold = 50;
-      if (currentScroll <= threshold && nav.current) {
-        if (nav.current.style.top !== "0rem") {
-          nav.current.style.top = "0rem";
-          nav.current.style.height = "6rem";
-        }
-      } else if (currentScroll < lastScroll && nav.current) {
-        nav.current.style.top = "0rem";
-        nav.current.style.height = "6rem";
-      } else if (currentScroll > lastScroll && nav.current) {
-        nav.current.style.top = "-6.25rem";
-        nav.current.style.height = "6rem";
-      }
-      setLastScroll(currentScroll);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScroll]);
+  const PistolScene = dynamic(() => import("./components/PistolScene"), {
+    ssr: false,
+    loading: () => <BeatLoader color="#ffffff80" />,
+  });
 
   return (
     <main>
@@ -45,7 +30,13 @@ export default function Home() {
         <div className="nav-dropdown">
           <div className="nav-button">
             <p className="menu">MY WORK</p>
-            <button className="nav-link" onClick={() => scrollTo(workDiv)}>
+            <button className="nav-link" onClick={() => scrollTo(pistolDiv)}>
+              {"["} STEAMPUNK PISTOL {"]"}
+            </button>
+            <button className="nav-link" onClick={() => scrollTo(pistolDiv)}>
+              {"["} SOULEATER GUITAR {"]"}
+            </button>
+            <button className="nav-link" onClick={() => scrollTo(keyboardDiv)}>
               {"["} KEYBOARD {"]"}
             </button>
           </div>
@@ -58,6 +49,8 @@ export default function Home() {
               justifyContent: "center",
               alignItems: "center",
               gap: "0.4rem",
+              position: "absolute",
+              right: "2.5%",
             }}
           >
             LET&apos;S TALK{" "}
@@ -74,12 +67,14 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="background"></div>
-      <div className="background-overlay"></div>
+      {/* <div className="background"></div>
+      <div className="background-overlay"></div> */}
 
       <div className="containerHolder">
         <div className="containerTitle">
-          <span>CHRISTIAN DAVENPORT</span>
+          <span style={{ fontSize: "clamp(16px, 2vw, 28px)" }}>
+            CHRISTIAN DAVENPORT
+          </span>
           <h1 className="title">
             3D ARTIST
             <br />
@@ -88,22 +83,57 @@ export default function Home() {
           <div className="cardTitleHolder">
             <div className="card-title">
               <div>
-                <span>ABOUT</span>
-                <br />
+                {/* <span>ABOUT</span>
+                <br /> */}
                 <p>
-                  I&apos;M CHRISTIAN, A 3D ARTIST AND DIGITAL DESIGNER PROFICIENT IN
-                  BLENDER, SUBSTANCE PAINTER, AND UNREAL ENGINE. I CREATE
-                  VISUALLY STUNNING AND TECHNICALLY SOPHISTICATED ASSETS AND
-                  ENVIRONMENTS FOR GAMES, FILMS, AND INTERACTIVE MEDIA.
+                  I&apos;M CHRISTIAN, A 3D ARTIST AND DIGITAL DESIGNER
+                  PROFICIENT IN BLENDER, SUBSTANCE PAINTER, AND UNREAL ENGINE. I
+                  CREATE VISUALLY STUNNING AND TECHNICALLY SOPHISTICATED ASSETS
+                  AND ENVIRONMENTS FOR GAMES, FILMS, AND INTERACTIVE MEDIA.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="container" style={{ width: "100%" }} ref={workDiv}>
+        <div className="container" style={{ width: "100%" }} ref={pistolDiv}>
           <div className="cardHolder" style={{ justifyContent: "center" }}>
-            <Link className="card" href={"/project"} style={{ opacity: "1" }}>
+            <Link
+              className="card"
+              href={"/projectPistol"}
+              style={{ opacity: "1" }}
+            >
+              <PistolScene />
+              <div className="overlay">
+                <h1>STEAMPUNK PISTOL</h1>
+                <span>
+                  GAME ASSET {"["} 2024 {"]"}
+                </span>
+              </div>
+            </Link>
+            <Link
+              className="card"
+              href={"/projectGuitar"}
+              style={{ opacity: "1" }}
+            >
+              <GuitarScene />
+              <div className="overlay">
+                <h1>SOULEATER GUITAR</h1>
+                <span>
+                  GAME ASSET {"["} 2024 {"]"}
+                </span>
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        <div className="container" style={{ width: "100%" }} ref={keyboardDiv}>
+          <div className="cardHolder" style={{ justifyContent: "center" }}>
+            <Link
+              className="card"
+              href={"/projectKeyboard"}
+              style={{ opacity: "1" }}
+            >
               <video
                 className="vid"
                 src="KeyboardExport.mp4"

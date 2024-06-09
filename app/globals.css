@@ -105,7 +105,7 @@
   }
 
   .logo {
-    position: absolute;
+    position: fixed;
     left: 5%;
     top: 2.5rem;
     z-index: 3;
@@ -140,8 +140,6 @@
 
   .nav-link {
     display: none;
-    position: absolute;
-    padding-top: 2rem;
   }
 
   .nav-button:hover .nav-link {
@@ -151,7 +149,7 @@
   .img {
     object-fit: cover;
     width: 100%;
-    height: 95vh;
+    height: 85vh;
     scale: 1;
     transition: 300ms ease-in-out;
   }
@@ -222,12 +220,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffffff10;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: #0b090a;
     width: 95%;
-    height: 95vh;
-    border: 1px solid #ffffff80;
+    height: 85vh;
+    border: 1px solid #ffffff40;
     position: relative;
     overflow: hidden;
     transition: 150ms linear;
@@ -243,10 +239,10 @@
   }
 
   .cardShowcase {
-    height: auto;
+    height: 95vh;
   }
 
-  .card:hover {
+  /* .card:hover {
 
     .img,
     .vid {
@@ -254,7 +250,7 @@
       scale: 1.05;
       transition: 300ms ease-in-out;
     }
-  }
+  } */
 
   .overlay {
     width: 100%;
@@ -263,6 +259,7 @@
     bottom: 0;
     padding-left: 1rem;
     padding-bottom: 1rem;
+    padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
   }
@@ -401,7 +398,7 @@
   }
 
   .card {
-    width: 98%;
+    width: 45%;
   }
 
   .cardShowcase {
@@ -421,7 +418,7 @@
   }
 
   .card-title {
-    max-width: 65%;
+    max-width: 55%;
   }
 
   .cardContact {
