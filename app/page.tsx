@@ -60,7 +60,7 @@ export default function Home() {
               gap: "0.4rem",
             }}
           >
-            LET'S TALK{" "}
+            LET&apos;S TALK{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="18"
@@ -91,7 +91,7 @@ export default function Home() {
                 <span>ABOUT</span>
                 <br />
                 <p>
-                  I'M CHRISTIAN, A 3D ARTIST AND DIGITAL DESIGNER PROFICIENT IN
+                  I&apos;M CHRISTIAN, A 3D ARTIST AND DIGITAL DESIGNER PROFICIENT IN
                   BLENDER, SUBSTANCE PAINTER, AND UNREAL ENGINE. I CREATE
                   VISUALLY STUNNING AND TECHNICALLY SOPHISTICATED ASSETS AND
                   ENVIRONMENTS FOR GAMES, FILMS, AND INTERACTIVE MEDIA.
