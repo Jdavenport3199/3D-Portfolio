@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @media (min-width: 1px) {
   ::-webkit-scrollbar {
     display: none;
@@ -30,24 +28,24 @@
   h1 {
     display: inline;
     color: white;
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 900;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
     line-height: 1.2;
-    font-size: clamp(48px, 6vw, 64px);
+    font-size: clamp(32px, 6vw, 48px);
   }
 
   .title {
-    font-size: clamp(38px, 8vw, 120px);
+    font-size: clamp(38px, 8vw, 140px);
     line-height: 1.2;
     font-family: "Inter", sans-serif;
   }
 
   h2 {
     display: inline;
-    color: white;
-    font-family: "Inter Tight", sans-serif;
+    color: #ffffff80;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-size: clamp(24px, 2vw, 32px)
+    font-size: clamp(20px, 2vw, 24px);
   }
 
   a,
@@ -55,20 +53,19 @@
   .menu {
     display: inline;
     color: white;
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: clamp(16px, 2vw, 18px);
     font-weight: 500;
     line-height: 1.6;
   }
 
   span {
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Inter", sans-serif;
     display: inline;
-    color: white;
-    color: #ffffff95;
-    font-size: clamp(14px, 2vw, 16px);
-    font-weight: 500;
-    line-height: 1.4;
+    color: #ffffff80;
+    font-size: clamp(16px, 2vw, 18px);
+    font-weight: 600;
+    line-height: 1.6;
   }
 
   a,
@@ -78,10 +75,10 @@
     width: fit-content;
     font-weight: 500;
     transition: 150ms linear;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    line-height: 1.4;
+    line-height: 1.6;
   }
 
   a:hover,
@@ -94,12 +91,12 @@
   li {
     display: inline;
     line-height: 1.6;
-    font-size: clamp(12px, 2vw, 14px);
-    color: #ffffff95;
-    font-family: "Roboto", sans-serif;
+    font-size: clamp(12px, 2vw, 16px);
+    color: white;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   li {
@@ -107,14 +104,10 @@
     width: fit-content;
   }
 
-  .bio {
-    width: 100%;
-  }
-
   .logo {
     position: absolute;
     left: 5%;
-    top: 1.5rem;
+    top: 2.5rem;
     z-index: 3;
     display: flex;
     flex-direction: column;
@@ -127,29 +120,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 1.5rem;
-
-    display: none;
+    top: 2.5rem;
   }
 
   .nav-dropdown {
     width: 90%;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
   }
 
   .nav-button {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
     cursor: pointer;
-    position: absolute;
     top: 0;
     transition: 150ms ease-out;
   }
 
   .nav-link {
     display: none;
+    position: absolute;
+    padding-top: 2rem;
   }
 
   .nav-button:hover .nav-link {
@@ -192,7 +184,7 @@
   }
 
   ::placeholder {
-    color: #ffffff95;
+    color: #ffffff80;
     opacity: 1;
   }
 
@@ -207,87 +199,22 @@
   .cardTitleHolder {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     gap: 1rem;
     padding-top: 1.5rem;
   }
 
   .cardTitleHolder {
-    padding-top: 1rem;
+    padding-top: 4rem;
   }
 
   .card-title {
     max-width: none;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-  }
-
-  .notification {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .blink {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .blinking-dot {
-    width: 0.6rem;
-    aspect-ratio: 1/1;
-    background-color: rgb(112, 228, 137);
-    border-radius: 100rem;
-    animation: blink 5s infinite;
-    position: absolute;
-  }
-
-  @keyframes blink {
-    0% {
-      opacity: 0.4;
-      scale: 0.65;
-    }
-
-    50% {
-      opacity: 1;
-      scale: 1;
-    }
-
-    100% {
-      opacity: 0.4;
-      scale: 0.65;
-    }
-  }
-
-  .blinking-glow {
-    width: 0.6rem;
-    aspect-ratio: 1/1;
-    box-shadow: 0px 0px 8px 4px rgb(112, 228, 137, 0.65);
-    border-radius: 100rem;
-    animation: glow 5s infinite;
-    position: absolute;
-  }
-
-  @keyframes glow {
-    0% {
-      opacity: 0;
-      scale: 0;
-    }
-
-    50% {
-      opacity: 1;
-      scale: .95;
-    }
-
-    100% {
-      opacity: 0;
-      scale: 0;
-    }
+    text-align: justify;
   }
 
   .card,
@@ -300,7 +227,7 @@
     -webkit-backdrop-filter: blur(20px);
     width: 95%;
     height: 95vh;
-    border: 1px solid #ffffff95;
+    border: 1px solid #ffffff80;
     position: relative;
     overflow: hidden;
     transition: 150ms linear;
@@ -368,6 +295,7 @@
   .description {
     padding-top: 1rem;
     padding-bottom: 2rem;
+    text-align: justify;
   }
 
   .container {
@@ -375,13 +303,12 @@
   }
 
   .containerTitle {
-    width: 95%;
-    height: 70vh;
+    width: 90%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
-    margin-top: 2rem;
+    text-align: left;
   }
 
   footer {
@@ -410,7 +337,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: fixed;
-    opacity: 0.075;
+    opacity: 0.1;
   }
 
   .background-overlay {
@@ -422,12 +349,6 @@
   }
 }
 
-@media (min-width: 849px) {
-  .card-title {
-    max-width: 25%;
-  }
-}
-
 @media (min-width: 1199px) {
   .title {
     line-height: 1;
@@ -435,14 +356,6 @@
 
   .nav-dropdown {
     width: 95%;
-  }
-
-  .bio {
-    width: 65%;
-  }
-
-  .containerTitle {
-    margin-top: 4rem;
   }
 
   .containerImg {
@@ -476,12 +389,10 @@
 
   .logo {
     left: 2.5%;
-    top: 2.5rem;
   }
 
   nav {
     display: flex;
-    top: 2.5rem;
   }
 
   .overlay {
@@ -502,7 +413,15 @@
   }
 
   .cardTitleHolder {
-    padding-top: 2.5rem;
+    padding-top: 6rem;
+  }
+
+  .containerTitle {
+    width: 75%;
+  }
+
+  .card-title {
+    max-width: 65%;
   }
 
   .cardContact {

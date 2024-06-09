@@ -49,6 +49,28 @@ export default function Home() {
               {"["} KEYBOARD {"]"}
             </button>
           </div>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:christiandavenport.studio@gmail.com"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "0.4rem",
+            }}
+          >
+            LET'S TALK{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="18"
+              width="14"
+              viewBox="0 0 448 512"
+              fill="white"
+            >
+              <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+            </svg>
+          </Link>
         </div>
       </nav>
 
@@ -57,21 +79,7 @@ export default function Home() {
 
       <div className="containerHolder">
         <div className="containerTitle">
-          <div className="notification">
-            <div className="blink">
-              <div className="blinking-dot"></div>
-              <div className="blinking-glow"></div>
-            </div>
-            <span
-              style={{ fontSize: "clamp(18px, 2vw, 22px)", color: "#ffffff95" }}
-            >
-              AVAILABLE FOR FREELANCE
-            </span>
-            <div className="blink">
-              <div className="blinking-dot"></div>
-              <div className="blinking-glow"></div>
-            </div>
-          </div>
+          <span>CHRISTIAN DAVENPORT</span>
           <h1 className="title">
             3D ARTIST
             <br />
@@ -80,23 +88,18 @@ export default function Home() {
           <div className="cardTitleHolder">
             <div className="card-title">
               <div>
-                <p>01&nbsp;</p>
+                <span>ABOUT</span>
                 <br />
-                <h2>3D MODELING</h2>
-              </div>
-            </div>
-            <div className="card-title">
-              <div>
-                <p>02&nbsp;</p>
-                <br />
-                <h2>PRODUCT DESIGN</h2>
-              </div>
-            </div>
-            <div className="card-title">
-              <div>
-                <p>03&nbsp;</p>
-                <br />
-                <h2>GAME ASSETS</h2>
+                <p>
+                  I'M CHRISTIAN, A 3D ARTIST AND DIGITAL DESIGNER PROFICIENT IN
+                  BLENDER, SUBSTANCE PAINTER, AND UNREAL ENGINE. I CREATE
+                  VISUALLY STUNNING AND TECHNICALLY SOPHISTICATED ASSETS AND
+                  ENVIRONMENTS FOR GAMES, FILMS, AND INTERACTIVE MEDIA.
+                  <br />
+                  <br />I REGULARLY UTILIZE THE ADOBE SUITE TO ENHANCE MY
+                  CREATIVE WORKFLOW, SEAMLESSLY INTEGRATING 2D AND 3D ELEMENTS,
+                  INTRICATE TEXTURING, AND COMPELLING VISUAL STORYTELLING.
+                </p>
               </div>
             </div>
           </div>
@@ -130,19 +133,19 @@ export default function Home() {
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.instagram.com/christiandavenport.studio/"
+              href="https://www.youtube.com/@christiandavenport.studio"
               style={{
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "flex-start",
+                alignItems: "center",
                 gap: "0.4rem",
               }}
             >
               YOUTUBE{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="20"
-                width="16"
+                height="18"
+                width="14"
                 viewBox="0 0 448 512"
                 fill="white"
                 style={{ transform: "rotate(-45deg)" }}
@@ -157,15 +160,15 @@ export default function Home() {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "flex-start",
+                alignItems: "center",
                 gap: "0.4rem",
               }}
             >
               INSTAGRAM{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="20"
-                width="16"
+                height="18"
+                width="14"
                 viewBox="0 0 448 512"
                 fill="white"
                 style={{ transform: "rotate(-45deg)" }}
@@ -180,38 +183,15 @@ export default function Home() {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "flex-start",
+                alignItems: "center",
                 gap: "0.4rem",
               }}
             >
               UNREAL MARKETPLACE{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="20"
-                width="16"
-                viewBox="0 0 448 512"
-                fill="white"
-                style={{ transform: "rotate(-45deg)" }}
-              >
-                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-              </svg>
-            </Link>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:christiandavenport.studio@gmail.com"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "flex-start",
-                gap: "0.4rem",
-              }}
-            >
-              EMAIL{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="20"
-                width="16"
+                height="18"
+                width="14"
                 viewBox="0 0 448 512"
                 fill="white"
                 style={{ transform: "rotate(-45deg)" }}
