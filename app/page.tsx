@@ -95,10 +95,6 @@ export default function Home() {
                   BLENDER, SUBSTANCE PAINTER, AND UNREAL ENGINE. I CREATE
                   VISUALLY STUNNING AND TECHNICALLY SOPHISTICATED ASSETS AND
                   ENVIRONMENTS FOR GAMES, FILMS, AND INTERACTIVE MEDIA.
-                  <br />
-                  <br />I REGULARLY UTILIZE THE ADOBE SUITE TO ENHANCE MY
-                  CREATIVE WORKFLOW, SEAMLESSLY INTEGRATING 2D AND 3D ELEMENTS,
-                  INTRICATE TEXTURING, AND COMPELLING VISUAL STORYTELLING.
                 </p>
               </div>
             </div>
