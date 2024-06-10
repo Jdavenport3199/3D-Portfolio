@@ -103,7 +103,7 @@ export default function Home() {
               href={"/projectPistol"}
               style={{ opacity: "1" }}
             >
-              <PistolScene />
+              {/* <PistolScene /> */}
               <div className="overlay">
                 <h1>STEAMPUNK PISTOL</h1>
                 <span>
@@ -116,7 +116,7 @@ export default function Home() {
               href={"/projectGuitar"}
               style={{ opacity: "1" }}
             >
-              <GuitarScene />
+              {/* <GuitarScene /> */}
               <div className="overlay">
                 <h1>SOULEATER GUITAR</h1>
                 <span>

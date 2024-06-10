@@ -9,7 +9,7 @@ export function Pistol(props) {
 
   useFrame(() => {
     if (mesh.current) {
-      mesh.current.rotation.y += 0.0025;
+      mesh.current.rotation.y += 0.005;
     }
   });
 

@@ -57,7 +57,7 @@ export default function Project() {
         </div>
         <div className="containerImg">
           <div className="cardShowcase">
-            <Scene />
+            {/* <Scene /> */}
           </div>
         </div>
       </div>
