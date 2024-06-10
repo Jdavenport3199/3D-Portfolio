@@ -6,6 +6,7 @@ import { BeatLoader } from "react-spinners";
 
 export default function Home() {
   const pistolDiv = useRef<HTMLDivElement>(null);
+  const guitarDiv = useRef<HTMLDivElement>(null);
   const keyboardDiv = useRef<HTMLDivElement>(null);
 
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
@@ -29,15 +30,15 @@ export default function Home() {
       <nav>
         <div className="nav-dropdown">
           <div className="nav-button">
-            <p className="menu">MY WORK</p>
+            <p className="menu">WORKS</p>
             <button className="nav-link" onClick={() => scrollTo(pistolDiv)}>
-              {"["} STEAMPUNK PISTOL {"]"}
+              STEAMPUNK PISTOL
             </button>
-            <button className="nav-link" onClick={() => scrollTo(pistolDiv)}>
-              {"["} SOULEATER GUITAR {"]"}
+            <button className="nav-link" onClick={() => scrollTo(guitarDiv)}>
+              SOULEATER GUITAR
             </button>
             <button className="nav-link" onClick={() => scrollTo(keyboardDiv)}>
-              {"["} KEYBOARD {"]"}
+              KEYBOARD ADVERTISEMENT
             </button>
           </div>
           <Link
@@ -53,13 +54,14 @@ export default function Home() {
               right: "2.5%",
             }}
           >
-            LET&apos;S TALK{" "}
+            CONTACT{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="18"
               width="14"
               viewBox="0 0 448 512"
               fill="white"
+              style={{ transform: "rotate(-45deg)" }}
             >
               <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
             </svg>
@@ -67,14 +69,11 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* <div className="background"></div>
-      <div className="background-overlay"></div> */}
-
       <div className="containerHolder">
         <div className="containerTitle">
-          <span style={{ fontSize: "clamp(16px, 2vw, 28px)" }}>
+          {/* <span style={{ fontSize: "clamp(16px, 2vw, 28px)" }}>
             CHRISTIAN DAVENPORT
-          </span>
+          </span> */}
           <h1 className="title">
             3D ARTIST
             <br />
@@ -82,75 +81,82 @@ export default function Home() {
           </h1>
           <div className="cardTitleHolder">
             <div className="card-title">
-              <div>
-                {/* <span>ABOUT</span>
-                <br /> */}
-                <p>
-                  I&apos;M CHRISTIAN, A 3D ARTIST AND DIGITAL DESIGNER
-                  PROFICIENT IN BLENDER, SUBSTANCE PAINTER, AND UNREAL ENGINE. I
-                  CREATE VISUALLY STUNNING AND TECHNICALLY SOPHISTICATED ASSETS
-                  AND ENVIRONMENTS FOR GAMES, FILMS, AND INTERACTIVE MEDIA.
-                </p>
-              </div>
+              {/* <span>About</span> */}
+              <p>
+                I&apos;M CHRISTIAN, A 3D ARTIST AND DIGITAL DESIGNER PROFICIENT
+                IN BLENDER, SUBSTANCE PAINTER, AND UNREAL ENGINE. I CREATE
+                VISUALLY STUNNING AND TECHNICALLY SOPHISTICATED ASSETS AND
+                ENVIRONMENTS FOR GAMES, FILMS, AND INTERACTIVE MEDIA.
+              </p>
             </div>
           </div>
         </div>
 
         <div className="container" style={{ width: "100%" }} ref={pistolDiv}>
-          <div className="cardHolder" style={{ justifyContent: "center" }}>
-            <Link
-              className="card"
-              href={"/projectPistol"}
-              style={{ opacity: "1" }}
-            >
-              {/* <PistolScene /> */}
-              <div className="overlay">
-                <h1>STEAMPUNK PISTOL</h1>
-                <span>
-                  GAME ASSET {"["} 2024 {"]"}
-                </span>
-              </div>
-            </Link>
-            <Link
-              className="card"
-              href={"/projectGuitar"}
-              style={{ opacity: "1" }}
-            >
-              {/* <GuitarScene /> */}
-              <div className="overlay">
-                <h1>SOULEATER GUITAR</h1>
-                <span>
-                  GAME ASSET {"["} 2024 {"]"}
-                </span>
-              </div>
-            </Link>
+          <div className="cardHolder">
+            <div style={{ width: "95%", textAlign: "center" }}>
+              <Link
+                className="card"
+                href={"/projectPistol"}
+                style={{ opacity: "1", marginBottom: "1rem" }}
+              >
+                <PistolScene />
+              </Link>
+              <span>GAME ASSET</span>
+              <br />
+              <h1>STEAMPUNK PISTOL</h1>
+            </div>
           </div>
         </div>
 
-        <div className="container" style={{ width: "100%" }} ref={keyboardDiv}>
-          <div className="cardHolder" style={{ justifyContent: "center" }}>
-            <Link
-              className="card"
-              href={"/projectKeyboard"}
-              style={{ opacity: "1" }}
-            >
-              <video
-                className="vid"
-                src="KeyboardExport.mp4"
-                width="0"
-                height="1080"
-                autoPlay
-                loop
-                playsInline
-                muted
-              />
-              <div className="overlay">
-                <h1>KEYBOARD</h1>
-                <span>
-                  PRODUCT DESIGN {"["} 2024 {"]"}
-                </span>
-              </div>
-            </Link>
+        <div
+          className="container"
+          style={{ width: "100%", marginTop: "1rem" }}
+          ref={guitarDiv}
+        >
+          <div className="cardHolder">
+            <div style={{ width: "95%", textAlign: "center" }}>
+              <Link
+                className="card"
+                href={"/projectGuitar"}
+                style={{ opacity: "1", marginBottom: "1rem" }}
+              >
+                <GuitarScene />
+              </Link>
+              <span>GAME ASSET</span>
+              <br />
+              <h1>SOULEATER GUITAR</h1>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="container"
+          style={{ width: "100%", marginTop: "1rem" }}
+          ref={keyboardDiv}
+        >
+          <div className="cardHolder">
+            <div style={{ width: "95%", textAlign: "center" }}>
+              <Link
+                className="card"
+                href={"/projectKeyboard"}
+                style={{ opacity: "1", marginBottom: "1rem" }}
+              >
+                <video
+                  className="vid"
+                  src="KeyboardExport.mp4"
+                  width="0"
+                  height="1080"
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                />
+              </Link>
+              <span>PRODUCT DESIGN</span>
+              <br />
+              <h1>KEYBOARD ADVERTISEMENT</h1>
+            </div>
           </div>
         </div>
 

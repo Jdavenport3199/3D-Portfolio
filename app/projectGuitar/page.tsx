@@ -58,7 +58,7 @@ export default function ProjectGuitar() {
         </div>
         <div className="containerImg">
           <div className="cardShowcase">
-            {/* <Scene /> */}
+            <Scene />
           </div>
         </div>
       </div>

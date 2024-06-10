@@ -11,7 +11,7 @@ export default function Project() {
       <div className="containerHolder">
         <div className="containerDescription">
           <div>
-            <h1>KEYBOARD</h1>
+            <h1>KEYBOARD ADVERTISEMENT</h1>
             <br />
             <span>
               PRODUCT DESIGN {"["} 2024 {"]"}
@@ -49,7 +49,7 @@ export default function Project() {
           </Link>
         </div>
         <div className="containerImg">
-          <div className="cardShowcase" style={{ background: "black" }}>
+          <div className="cardShowcase">
             <video
               className="img"
               src="KeyboardExport.mp4"

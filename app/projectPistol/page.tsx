@@ -26,9 +26,10 @@ export default function Project() {
           </div>
           <div className="description">
             <p>
-              THE NEXT-GEN KEYBOARD COMBINES ERGONOMICS AND STYLE, ELEVATING
-              YOUR TYPING EXPERIENCE TO NEW HEIGHTS. IT OFFERS PRECISION AND
-              COMFORT, TRANSFORMING THE WAY YOU INTERACT WITH YOUR DEVICE.
+              THE STEAMPUNK PISTOL - WHERE INGENUITY AND STYLE CONVERGE TO
+              ELEVATE YOUR GAMING EXPERIENCE. THIS NEXT-GEN IN-GAME ASSET OFFERS
+              UNMATCHED PERFORMANCE AND AESTHETICS, TURNING YOUR VIRTUAL
+              ADVENTURES INTO A VICTORIAN-INSPIRED MASTERPIECE.
             </p>
           </div>
           <Link
@@ -57,7 +58,7 @@ export default function Project() {
         </div>
         <div className="containerImg">
           <div className="cardShowcase">
-            {/* <Scene /> */}
+            <Scene />
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const GuitarScene: React.FC = () => {
   return (
     <Canvas
       camera={{ fov: 30, position: [4, 0, 10] }}
-      style={{ background: "#0b090a" }}
+      style={{ background: "black" }}
     >
       <Environment preset="warehouse" />
       {/* <OrbitControls /> */}

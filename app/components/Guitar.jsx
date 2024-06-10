@@ -9,7 +9,7 @@ export function Guitar(props) {
 
   useFrame(() => {
     if (mesh.current) {
-      mesh.current.rotation.y += 0.005;
+      mesh.current.rotation.y += 0.0025;
     }
   });
 
