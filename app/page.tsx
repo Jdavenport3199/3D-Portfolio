@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <video
+      {/* <video
         className="background"
         src="background.mov"
         width="1920"
@@ -80,6 +80,16 @@ export default function Home() {
         muted
         style={{
           maskImage: "linear-gradient(to bottom, black, transparent 90%)",
+        }}
+      /> */}
+
+      <img
+        className="background"
+        src="test.webp"
+        width="1920"
+        height="1080"
+        style={{
+          maskImage: "linear-gradient(to bottom, black, transparent 100%)",
         }}
       />
       <div className="background-overlay"></div>
@@ -165,7 +175,11 @@ export default function Home() {
               <Link
                 className="card"
                 href={"/projectKeyboard"}
-                style={{ opacity: "1", marginBottom: "1rem", border: "1px solid #7C7C7C" }}
+                style={{
+                  opacity: "1",
+                  marginBottom: "1rem",
+                  border: "1px solid #7C7C7C",
+                }}
               >
                 <video
                   className="vid"

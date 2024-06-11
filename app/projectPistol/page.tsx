@@ -15,17 +15,13 @@ export default function Project() {
         <Link href={"/"}>BACK</Link>
       </div>
 
-      <video
+      <img
         className="background"
-        src="background.mov"
+        src="test.webp"
         width="1920"
         height="1080"
-        autoPlay
-        loop
-        playsInline
-        muted
         style={{
-          maskImage: "linear-gradient(to bottom, black, transparent 90%)",
+          maskImage: "linear-gradient(to bottom, black, transparent 100%)",
         }}
       />
       <div className="background-overlay"></div>

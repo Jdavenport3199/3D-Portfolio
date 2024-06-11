@@ -336,14 +336,14 @@
     object-fit: cover;
     opacity: 0;
     animation: fade 1000ms ease-in-out forwards;
-    scale: 1.1;
+    /* scale: 1.1; */
   }
 
   .background-overlay {
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     position: fixed;
     background: #00000080;
   }
