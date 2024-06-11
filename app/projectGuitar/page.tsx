@@ -15,6 +15,21 @@ export default function ProjectGuitar() {
         <Link href={"/"}>BACK</Link>
       </div>
 
+      <video
+        className="background"
+        src="background.mov"
+        width="1920"
+        height="1080"
+        autoPlay
+        loop
+        playsInline
+        muted
+        style={{
+          maskImage: "linear-gradient(to bottom, black, transparent 90%)",
+        }}
+      />
+      <div className="background-overlay"></div>
+
       <div className="containerHolder">
         <div className="containerDescription">
           <div>

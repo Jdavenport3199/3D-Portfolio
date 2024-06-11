@@ -7,7 +7,7 @@ const PistolScene: React.FC = () => {
   return (
     <Canvas
       camera={{ fov: 40, position: [0, 1, 5] }}
-      style={{ background: "black" }}
+      style={{ background: "none" }}
     >
       <Environment preset="warehouse" />
       {/* <OrbitControls /> */}

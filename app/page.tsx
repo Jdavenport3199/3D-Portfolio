@@ -69,19 +69,30 @@ export default function Home() {
         </div>
       </nav>
 
+      <video
+        className="background"
+        src="background.mov"
+        width="1920"
+        height="1080"
+        autoPlay
+        loop
+        playsInline
+        muted
+        style={{
+          maskImage: "linear-gradient(to bottom, black, transparent 90%)",
+        }}
+      />
+      <div className="background-overlay"></div>
+
       <div className="containerHolder">
-        <div className="containerTitle">
-          {/* <span style={{ fontSize: "clamp(16px, 2vw, 28px)" }}>
+        <div className="containerTitle" style={{ position: "relative" }}>
+          {/* <span style={{ fontSize: "clamp(16px, 2vw, 28px)", fontWeight: "600" }}>
             CHRISTIAN DAVENPORT
           </span> */}
-          <h1 className="title">
-            3D ARTIST
-            <br />
-            DIGITAL DESIGNER
-          </h1>
+          <h1 className="title1">3D ARTIST</h1>
+          <h1 className="title2">DIGITAL DESIGNER</h1>
           <div className="cardTitleHolder">
             <div className="card-title">
-              {/* <span>About</span> */}
               <p>
                 I&apos;M CHRISTIAN, A 3D ARTIST AND DIGITAL DESIGNER PROFICIENT
                 IN BLENDER, SUBSTANCE PAINTER, AND UNREAL ENGINE. I CREATE
@@ -89,7 +100,21 @@ export default function Home() {
                 ENVIRONMENTS FOR GAMES, FILMS, AND INTERACTIVE MEDIA.
               </p>
             </div>
+            <span>©2024. ALL RIGHTS RESERVED.</span>
           </div>
+
+          <span
+            style={{
+              position: "absolute",
+              bottom: "2rem",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+            id="fade"
+          >
+            SCROLL TO EXPLORE MY WORK
+          </span>
         </div>
 
         <div className="container" style={{ width: "100%" }} ref={pistolDiv}>
@@ -140,7 +165,7 @@ export default function Home() {
               <Link
                 className="card"
                 href={"/projectKeyboard"}
-                style={{ opacity: "1", marginBottom: "1rem" }}
+                style={{ opacity: "1", marginBottom: "1rem", border: "1px solid #7C7C7C" }}
               >
                 <video
                   className="vid"
