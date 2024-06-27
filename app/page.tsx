@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { BeatLoader } from "react-spinners";
+import RaygunScene from "./components/RaygunScene";
 
 export default function Home() {
   const pistolDiv = useRef<HTMLDivElement>(null);
@@ -85,11 +86,11 @@ export default function Home() {
 
       <img
         className="background"
-        src="test.webp"
+        src="orb.jpg"
         width="1920"
         height="1080"
         style={{
-          maskImage: "linear-gradient(to bottom, black, transparent 100%)",
+          maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
         }}
       />
       <div className="background-overlay"></div>
@@ -102,28 +103,28 @@ export default function Home() {
           <h1 className="title1">3D ARTIST</h1>
           <h1 className="title2">DIGITAL DESIGNER</h1>
           <div className="cardTitleHolder">
-            <div className="card-title">
+            {/* <div className="card-title">
               <p>
                 I&apos;M CHRISTIAN, A 3D ARTIST AND DIGITAL DESIGNER PROFICIENT
                 IN BLENDER, SUBSTANCE PAINTER, AND UNREAL ENGINE. I CREATE
                 VISUALLY STUNNING AND TECHNICALLY SOPHISTICATED ASSETS AND
                 ENVIRONMENTS FOR GAMES, FILMS, AND INTERACTIVE MEDIA.
               </p>
-            </div>
-            <span>©2024. ALL RIGHTS RESERVED.</span>
+            </div> */}
+            <span>©2024 CHRISTIAN DAVENPORT</span>
           </div>
 
           <span
             style={{
               position: "absolute",
-              bottom: "2rem",
+              bottom: "4rem",
               width: "100%",
               display: "flex",
               justifyContent: "center",
             }}
             id="fade"
           >
-            SCROLL TO EXPLORE MY WORK
+            SCROLL TO EXPLORE WORK
           </span>
         </div>
 
@@ -164,6 +165,27 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* <div
+          className="container"
+          style={{ width: "100%", marginTop: "1rem" }}
+          ref={guitarDiv}
+        >
+          <div className="cardHolder">
+            <div style={{ width: "95%", textAlign: "center" }}>
+              <Link
+                className="card"
+                href={"/projectGuitar"}
+                style={{ opacity: "1", marginBottom: "1rem" }}
+              >
+                <RaygunScene />
+              </Link>
+              <span>GAME ASSET</span>
+              <br />
+              <h1>SOULEATER GUITAR</h1>
+            </div>
+          </div>
+        </div> */}
 
         <div
           className="container"

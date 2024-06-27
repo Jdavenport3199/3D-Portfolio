@@ -17,11 +17,11 @@ export default function Project() {
 
       <img
         className="background"
-        src="test.webp"
+        src="orb.jpg"
         width="1920"
         height="1080"
         style={{
-          maskImage: "linear-gradient(to bottom, black, transparent 100%)",
+          maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
         }}
       />
       <div className="background-overlay"></div>

@@ -10,11 +10,11 @@ export default function Project() {
 
       <img
         className="background"
-        src="test.webp"
+        src="orb.jpg"
         width="1920"
         height="1080"
         style={{
-          maskImage: "linear-gradient(to bottom, black, transparent 100%)",
+          maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
         }}
       />
       <div className="background-overlay"></div>
@@ -60,9 +60,9 @@ export default function Project() {
           </Link>
         </div>
         <div className="containerImg">
-          <div className="cardShowcase">
+          <div className="cardShowcase" style={{ border: "1px solid #7C7C7C" }}>
             <video
-              className="img"
+              className="vid"
               src="KeyboardExport.mp4"
               width="1920"
               height="1080"
@@ -70,7 +70,6 @@ export default function Project() {
               loop
               playsInline
               muted
-              style={{ border: "1px solid #7C7C7C" }}
             />
           </div>
         </div>
