@@ -6,7 +6,7 @@ import Raygun from "./Raygun";
 const RaygunScene: React.FC = () => {
   return (
     <Canvas
-      camera={{ fov: 30, position: [4, 0, 10] }}
+      camera={{ fov: 40, position: [4, 0, 8] }}
       style={{ background: "none" }}
     >
       <Environment preset="warehouse" />

@@ -6,7 +6,7 @@ import Pistol from "./Pistol";
 const PistolScene: React.FC = () => {
   return (
     <Canvas
-      camera={{ fov: 40, position: [0, 1, 5] }}
+      camera={{ fov: 40, position: [4, 0, 2] }}
       style={{ background: "none" }}
     >
       <Environment preset="warehouse" />

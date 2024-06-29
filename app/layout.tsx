@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const work_sans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "3D ARTIST / DIGITAL DESIGNER",
-    template: "%s | 3D ARTIST / DIGITAL DESIGNER",
+    default: "STUDIO ©2024",
+    template: "%s | STUDIO ©2024",
   },
-  description:
-    "I'm Chrisitan, a 3D Artist and Digital Designer proficient in Blender, Substance Painter, and Unreal Engine.",
-  keywords: ["Christian", "Davenport", "3D", "Artist", "Digital", "Designer"],
+  description: "DESIGN STUDIO ©2024",
+  // keywords: ["Christian", "Davenport", "3D", "Artist", "Digital", "Designer"],
   metadataBase: new URL("https://www.christiandavenport.studio/"),
 };
 
@@ -31,7 +30,7 @@ export default function RootLayout({
           ></script>
         </head>
 
-        <body className={inter.className}>{children}</body>
+        <body className={work_sans.className}>{children}</body>
       </html>
     </>
   );
