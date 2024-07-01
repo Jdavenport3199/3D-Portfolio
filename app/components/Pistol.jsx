@@ -1,20 +1,32 @@
 import React from 'react'
 import { useGLTF, Center } from '@react-three/drei'
-import { useEffect, useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useRef } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
 
 export function Pistol(props) {
   const { nodes, materials } = useGLTF('/pistol.glb')
   const mesh = useRef();
+  const { viewport } = useThree()
+  
+  // useFrame(() => {
+  //   if (mesh.current) {
+  //     mesh.current.rotation.y += 0.0015;
+  //   }
+  // });
 
-  useFrame(() => {
-    if (mesh.current) {
-      mesh.current.rotation.y += 0.0015;
-    }
-  });
+  const screenWidth = window.innerWidth;
+  let scaleFactor;
+
+  if (screenWidth < 600) {
+    scaleFactor = 3;
+  } else {
+    scaleFactor = 6;
+  }
+
+  const scale = viewport.width / scaleFactor;
 
   return (
-    <group ref={mesh} {...props} position={[0, 0, 0]} rotation={[0, Math.PI / 4, 0]} dispose={null}>
+    <group ref={mesh} {...props} position={[0, 0, 0]} rotation={[0, Math.PI / -3, 0]} scale={scale} dispose={null}>
       <Center>
         <mesh geometry={nodes.Circle001.geometry} material={materials.Bronze} />
         <mesh geometry={nodes.Circle001_1.geometry} material={materials.Blacksteel} />

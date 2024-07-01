@@ -111,7 +111,7 @@ export default function Home() {
         <div className="container" style={{ width: "100%" }} ref={pistolDiv}>
           <div className="cardHolder">
             <div style={{ width: "95%", position: "relative" }}>
-              <div className="card">
+              <div className="card-scene">
                 <PistolScene />
               </div>
               <div className="cardDescriptionRight">
@@ -229,7 +229,7 @@ export default function Home() {
         >
           <div className="cardHolder">
             <div style={{ width: "95%", position: "relative" }}>
-              <div className="card">
+              <div className="card-scene">
                 <RaygunScene />
               </div>
               <div className="cardDescriptionRight">

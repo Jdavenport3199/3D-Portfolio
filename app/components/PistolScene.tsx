@@ -6,11 +6,11 @@ import Pistol from "./Pistol";
 const PistolScene: React.FC = () => {
   return (
     <Canvas
-      camera={{ fov: 40, position: [4, 0, 2] }}
+      camera={{ fov: 10, position: [2, 0, 0] }}
       style={{ background: "none" }}
     >
       <Environment preset="warehouse" />
-      {/* <OrbitControls /> */}
+      <OrbitControls enableZoom={false} enablePan={false} />
       <Pistol />
     </Canvas>
   );

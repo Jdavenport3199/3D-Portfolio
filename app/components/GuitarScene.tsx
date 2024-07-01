@@ -6,11 +6,11 @@ import Guitar from "./Guitar";
 const GuitarScene: React.FC = () => {
   return (
     <Canvas
-      camera={{ fov: 30, position: [4, 0, 10] }}
+      camera={{ fov: 10, position: [2, 0, 0] }}
       style={{ background: "none" }}
     >
       <Environment preset="warehouse" />
-      {/* <OrbitControls /> */}
+      <OrbitControls enableZoom={false} enablePan={false} />
       <Guitar />
     </Canvas>
   );

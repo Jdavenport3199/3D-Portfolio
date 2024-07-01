@@ -1,20 +1,32 @@
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
-import { useEffect, useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useRef } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
 
 export function Guitar(props) {
   const { nodes, materials } = useGLTF('/guitar.glb')
   const mesh = useRef();
+  const { viewport } = useThree()
 
-  useFrame(() => {
-    if (mesh.current) {
-      mesh.current.rotation.y -= 0.0015;
-    }
-  });
+  // useFrame(() => {
+  //   if (mesh.current) {
+  //     mesh.current.rotation.y -= 0.0015;
+  //   }
+  // });
+
+  const screenWidth = window.innerWidth;
+  let scaleFactor;
+
+  if (screenWidth < 600) {
+    scaleFactor = 4;
+  } else {
+    scaleFactor = 12;
+  }
+
+  const scale = viewport.width / scaleFactor;
 
   return (
-    <group ref={mesh} {...props} position={[0, -1, 0]} rotation={[0, Math.PI / 1, 0]} dispose={null}>
+    <group ref={mesh} {...props} position={[0, -0.065, 0]} rotation={[0, Math.PI / .65, 0]} scale={scale} dispose={null}>
       <mesh geometry={nodes.Strap.geometry} material={materials.Strap} position={[1.066, 0.43, -0.06]} rotation={[0, 0, -0.849]} />
       <mesh geometry={nodes.Stitches.geometry} material={materials.Stitches} />
       <mesh geometry={nodes.Board001.geometry} material={materials.GuitarBase} position={[0.014, 0, -0.074]} rotation={[Math.PI / 2, 0, 0]} />

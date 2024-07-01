@@ -6,11 +6,11 @@ import Raygun from "./Raygun";
 const RaygunScene: React.FC = () => {
   return (
     <Canvas
-      camera={{ fov: 40, position: [4, 0, 8] }}
+      camera={{ fov: 10, position: [2, 0, 0] }}
       style={{ background: "none" }}
     >
       <Environment preset="warehouse" />
-      {/* <OrbitControls /> */}
+      <OrbitControls enableZoom={false} enablePan={false} />
       <Raygun />
     </Canvas>
   );
