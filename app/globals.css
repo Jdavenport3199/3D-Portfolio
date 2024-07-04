@@ -164,7 +164,7 @@
 
   .vid {
     width: 100%;
-    height: 95vh;
+    height: 40vh;
     object-fit: cover;
     scale: 1;
     transition: 300ms ease-in-out;
@@ -188,21 +188,16 @@
     animation-delay: 2s;
   }
 
-  .card,
-  .card-scene {
+  .card {
     display: flex;
     justify-content: center;
     align-items: center;
     background: none;
     width: 100%;
-    height: 100vh;
+    height: 45vh;
     position: relative;
     overflow: hidden;
     transition: 150ms linear;
-  }
-
-  .card-scene {
-    height: 40vh;
   }
 
   .containerHolder {
@@ -325,20 +320,24 @@
     width: 95%;
   }
 
-  .card-scene {
+  .card {
     height: 100vh;
+  }
+
+  .vid {
+    height: 95vh;
   }
 
   .cardDescriptionLeft,
   .cardDescriptionRight {
     position: absolute;
-    bottom: 10%;
-    right: 5%;
+    bottom: 4rem;
+    right: 2rem;
     width: 600px;
   }
 
   .cardDescriptionLeft {
-    left: 5%;
+    left: 2rem;
   }
 
   .container {

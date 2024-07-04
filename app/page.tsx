@@ -111,10 +111,10 @@ export default function Home() {
         <div className="container" style={{ width: "100%" }} ref={pistolDiv}>
           <div className="cardHolder">
             <div style={{ width: "95%", position: "relative" }}>
-              <div className="card-scene">
+              <div className="card">
                 <PistolScene />
               </div>
-              <div className="cardDescriptionRight">
+              <div className="cardDescriptionLeft">
                 <h1>STEAMPUNK PISTOL</h1>
                 <br />
                 <span>
@@ -173,7 +173,7 @@ export default function Home() {
               <div className="card">
                 <GuitarScene />
               </div>
-              <div className="cardDescriptionLeft">
+              <div className="cardDescriptionRight">
                 <h1>SOULEATER GUITAR</h1>
                 <br />
                 <span>
@@ -229,10 +229,13 @@ export default function Home() {
         >
           <div className="cardHolder">
             <div style={{ width: "95%", position: "relative" }}>
-              <div className="card-scene">
+              <div className="card">
                 <RaygunScene />
               </div>
-              <div className="cardDescriptionRight">
+              <div
+                className="cardDescriptionLeft"
+                style={{ marginBottom: "1rem" }}
+              >
                 <h1>RAYGUN</h1>
                 <br />
                 <span>
@@ -296,7 +299,10 @@ export default function Home() {
                   muted
                 />
               </div>
-              <div className="cardDescriptionLeft">
+              <div
+                className="cardDescriptionRight"
+                style={{ marginTop: "1rem" }}
+              >
                 <h1>KEYBOARD ADVERTISEMENT</h1>
                 <br />
                 <span>
