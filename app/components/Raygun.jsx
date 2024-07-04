@@ -8,11 +8,11 @@ export function Raygun(props) {
   const mesh = useRef();
   const { viewport } = useThree()
 
-  // useFrame(() => {
-  //   if (mesh.current) {
-  //     mesh.current.rotation.y += 0.0015;
-  //   }
-  // });
+  useFrame(() => {
+    if (mesh.current) {
+      mesh.current.rotation.y += 0.0015;
+    }
+  });
 
   const screenWidth = window.innerWidth;
   let scaleFactor;

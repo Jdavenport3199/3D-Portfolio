@@ -10,7 +10,7 @@ const RaygunScene: React.FC = () => {
       style={{ background: "none" }}
     >
       <Environment preset="warehouse" />
-      <OrbitControls enableZoom={false} enablePan={false} />
+      {/* <OrbitControls enableZoom={false} enablePan={false} /> */}
       <Raygun />
     </Canvas>
   );
