@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 
 export function Pistol(props) {
-  const { nodes, materials } = useGLTF('/pistol.glb')
+  const { nodes, materials } = useGLTF('/pistol/pistol.glb')
   const mesh = useRef();
   const { viewport } = useThree()
   
@@ -17,12 +17,11 @@ export function Pistol(props) {
   const screenWidth = window.innerWidth;
   let scaleFactor;
 
-  if (screenWidth < 600) {
-    scaleFactor = 3;
-  } else {
+  if (screenWidth < 1199) {
     scaleFactor = 6;
+  } else {
+    scaleFactor = 3;
   }
-
   const scale = viewport.width / scaleFactor;
 
   return (

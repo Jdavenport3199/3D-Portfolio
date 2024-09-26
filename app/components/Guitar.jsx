@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 
 export function Guitar(props) {
-  const { nodes, materials } = useGLTF('/guitar.glb')
+  const { nodes, materials } = useGLTF('/guitar/guitar.glb')
   const mesh = useRef();
   const { viewport } = useThree()
 
@@ -17,12 +17,11 @@ export function Guitar(props) {
   const screenWidth = window.innerWidth;
   let scaleFactor;
 
-  if (screenWidth < 500) {
-    scaleFactor = 6;
-  } else {
+  if (screenWidth < 1199) {
     scaleFactor = 12;
+  } else {
+    scaleFactor = 6;
   }
-
   const scale = viewport.width / scaleFactor;
 
   return (

@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 
 export function Raygun(props) {
-  const { nodes, materials } = useGLTF('/raygun.glb')
+  const { nodes, materials } = useGLTF('/raygun/raygun.glb')
   const mesh = useRef();
   const { viewport } = useThree()
 
@@ -17,10 +17,10 @@ export function Raygun(props) {
   const screenWidth = window.innerWidth;
   let scaleFactor;
 
-  if (screenWidth < 600) {
-    scaleFactor = 6;
-  } else {
+  if (screenWidth < 1199) {
     scaleFactor = 12;
+  } else {
+    scaleFactor = 6;
   }
 
   const scale = viewport.width / scaleFactor;
