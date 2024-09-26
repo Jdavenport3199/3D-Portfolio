@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+import { work_sans } from "./ui/fonts";
 import "./globals.css";
-
-const work_sans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "STUDIO ©2024",
-    template: "%s | STUDIO ©2024",
+    default: "Christian Davenport — Portfolio",
+    template: "%s — Christian Davenport",
   },
-  description: "DESIGN STUDIO ©2024",
-  // keywords: ["Christian", "Davenport", "3D", "Artist", "Digital", "Designer"],
+  description: "3D Artist & Digital Designer",
+  openGraph: {
+    images: "https://www.christiandavenport.studio/opengraph-image.png",
+  },
   metadataBase: new URL("https://www.christiandavenport.studio/"),
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -22,15 +25,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <head>
-          <script
-            defer
-            src="https://kit.fontawesome.com/5f2bb09986.js"
-            crossOrigin="anonymous"
-          ></script>
-        </head>
-
-        <body className={work_sans.className}>{children}</body>
+        <body className={`${work_sans.className} antialiased`}>{children}</body>
       </html>
     </>
   );
