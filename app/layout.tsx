@@ -4,10 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Christian Davenport — Portfolio",
+    default: "Christian Davenport — 3D Artist. Digital Designer.",
     template: "%s — Christian Davenport",
   },
-  description: "3D Artist & Digital Designer",
+  description:
+    "I'm Christian, a 3D Artist and Digital Designer proficient in Blender, Substance Painter, and Unreal Engine. ",
   openGraph: {
     images: "https://www.christiandavenport.studio/opengraph-image.png",
   },
